@@ -6,7 +6,7 @@ import Footer from './assets/components/footer'
 import './App.css'
 import './index.css'
 import Body from './assets/components/body'
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 function App() {
  
 

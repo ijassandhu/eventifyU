@@ -41,7 +41,7 @@ export default function Footer(){
         </a>
       </div>
       <p className="text-gray-400">
-        <i className="fas fa-envelope"></i> <a href="mailto:events@college.edu" class="hover:underline">events@college.edu</a>
+        <i className="fas fa-envelope"></i> <a href="mailto:events@college.edu" className="hover:underline">events@college.edu</a>
       </p>
     </div>
   </div>
