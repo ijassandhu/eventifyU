@@ -5,7 +5,10 @@ import Navbar from './assets/components/navbar'
 import Footer from './assets/components/footer'
 import './App.css'
 import './index.css'
+import { Route , Routes } from 'react-router-dom'
+
 import Body from './assets/components/body'
+import Login from './assets/pages/login/Login'
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 function App() {
  
@@ -13,7 +16,11 @@ function App() {
   return (
     <>
      <Navbar/> 
-     <Body/>
+     <Routes>
+      <Route path="/" element={<Body/>}/>
+      <Route path='/login' element={<Login/>}/>
+    </Routes>
+
       <Footer/>
     </>
   )
