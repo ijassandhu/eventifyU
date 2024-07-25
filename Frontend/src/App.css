@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.hero-section1 {
+  font-family: "Open Sans" "Gill Sans", "Gill Sans MT", "Calibri",
+    "Trebuchet MS", sans-serif;
+  color: white;
+  padding-bottom: 50px;
+  background-image: linear-gradient(45deg, #12c2e9, #f64f59);
+}
+
+body {
+  margin-top: 5rem;
+}
