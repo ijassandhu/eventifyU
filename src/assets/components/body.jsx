@@ -21,7 +21,7 @@ export default function Body() {
                     <h1 className="text-5xl leading-tight font-bold">
                         Welcome to Chandigarh Group of Colleges Events Hub.
                     </h1>
-                    <h2 className="text-2xl text-[#2271FF] mt-12 font-semibold">Your Gateway to All Campus Activities and Events</h2>
+                    <h2 className="text-2xl text-[#ff7c11] mt-12 font-medium">Your Gateway to All Campus Activities and Events</h2>
                 </div>
                 <div>
                     <img src={register} alt="" className='h-[450px] rounded-2xl mt-[28%] hover:h-[480px] duration-500'/>
