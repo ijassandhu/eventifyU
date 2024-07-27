@@ -9,7 +9,20 @@
   color: white;
   padding-bottom: 50px;
   background-image: linear-gradient(45deg,#12C2E9 ,#F64F59);
+  height: calc(100vh - 5rem);
 }
 body{
   margin-top: 5rem;
+}
+.feedback{
+  background-image: linear-gradient(to right bottom, #222222, #46334c, #7e3d67, #be426b, #f64f59);
+  color: aliceblue;
+  height: calc(100vh - 5rem);
+}
+.text{
+  font-family:'Open Sans' 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+}
+.hero-section2{
+  height: calc(100vh);
+
 }

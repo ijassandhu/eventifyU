@@ -18,15 +18,15 @@ export default function Navbar(){
                 <li className=" hover:text-red-500"><Link to ="/">Home</Link></li>
                 <li className=" hover:text-red-500"><Link to ="/events">Events</Link></li>
                 <li className=" hover:text-red-500"><Link to ="/clubs">Clubs</Link></li>
-                <li className=" hover:text-red-500"><Link to ="#">Dashboard</Link></li>
-                <li className=" hover:text-red-500"><Link to ="#">Feedback</Link></li>
+                <li className=" hover:text-red-500"><Link to ="/dashboard">Dashboard</Link></li>
+                <li className=" hover:text-red-500"><Link to ="/feedback">Feedback</Link></li>
             </ul>
             <div className="flex ms-24 align-middle justify-center w-[350px]" >
                  <button onClick={()=>{
-                    console.log('set state true');
+                    // console.log('set state true');
                     setShowModal(true)}} className="text-lg font-semibold text-black bg-[#ff7c11] w-28 h-12 rounded-xl justify-center flex items-center hover:bg-[#ff9845] ml-auto shadow-md xl shadow-black">Sign In</button>
                  {showModal && <Login onClose={()=> {
-                    console.log('state set false');
+                    // console.log('state set false');
                     setShowModal(false)}}/> }
                  <button onClick={()=>setShowModal2(true)} className="text-lg font-semibold text-black bg-[#ff7c11] w-28 h-12 rounded-xl justify-center flex items-center hover:bg-[#ff9845] ml-4 shadow-md xl shadow-black">Sign Up</button>
                  {showModal2 && <Signup onClose={()=> setShowModal2(false)}/> }
