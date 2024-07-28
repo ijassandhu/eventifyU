@@ -19,7 +19,7 @@ export default function Login({onClose}) {
               type="password"
               placeholder="Enter your password"
               required />
-            <button className="bg-[#ff7c11] h-10 w-24 rounded-2xl text-black hover:bg-[#ff9138]">SIGN IN</button>
+            <button className="bg-[#ff943c] h-10 w-24 rounded-2xl text-black hover:bg-[#ff9138]">SIGN IN</button>
             <button className="text-[#ff7c11] hover:underline">Forget Password?</button>
           </form>
           <hr className="w-[100%] border border-gray-300"/>
