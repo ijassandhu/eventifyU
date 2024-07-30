@@ -1,7 +1,7 @@
 import React from "react"
 import { X } from 'lucide-react';
 
-export default function Login({onClose}) {
+export default function Login({onClose, toggleModal}) {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center">
       <div className="mt-10 flex flex-col gap-5 text-white">
@@ -10,12 +10,12 @@ export default function Login({onClose}) {
           <h1 className="text-3xl text-gray-100">Sign in</h1>
           <form className="flex flex-col gap-5 items-center">
             <input
-              className="w-full px-4 py-3 text-blackrounded-md border border-gray-500"
+              className="w-full px-4 py-3 text-blackrounded-md border border-gray-500 text-black"
               type="email"
               placeholder="Enter your email"
               required />
             <input
-              className="w-full px-4 py-3 text-black rounded-md border border-gray-500"
+              className="w-full px-4 py-3 text-black rounded-md border border-gray-500 text-black"
               type="password"
               placeholder="Enter your password"
               required />
@@ -24,7 +24,7 @@ export default function Login({onClose}) {
           </form>
           <hr className="w-[100%] border border-gray-300"/>
           <div>
-          <p className="text-gray-500">Don't have account?</p>
+          <p className="text-gray-500">Don't have account? <button onClick={toggleModal} className='text-[#ff9138]'>Sign up</button></p>
           {/* <Link to="/signup">Sign Up</Link> */}
           </div>
         </div>

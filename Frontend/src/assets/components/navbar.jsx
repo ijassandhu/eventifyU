@@ -9,6 +9,11 @@ import Signup from "./signup.jsx"
 const Navbar = () => {
     const [showModal, setShowModal] = useState(false);
     const [showModal2, setShowModal2] = useState(false);
+    const toggleModal = ()=> {
+        setShowModal(!showModal);
+        console.log('called')
+        setShowModal2(!showModal2);
+    }
     // const [menuOpen, setMenuOpen] = useState(false);
 
     return (
@@ -22,21 +27,21 @@ const Navbar = () => {
                     <li className="hover:text-red-500"><Link to="/dashboard">Dashboard</Link></li>
                     <li className="hover:text-red-500"><Link to="/feedback">Feedback</Link></li>
                 </ul>
-                <div className="flex items-center space-x-4">
+                <div className="flex items-center gap-4">
                     <button
                         onClick={() => setShowModal(true)}
                         className="md:text-lg text-sm font-semibold text-[#ff943c] md:w-28 md:h-12 rounded-xl flex items-center justify-center shadow-md border border-[#ff7c11] hover:shadow-black w-16 h-9 "
                     >
                         Sign In
                     </button>
-                    {showModal && <Login onClose={() => setShowModal(false)} />}
+                    {showModal && <Login onClose={() => setShowModal(false)} toggleModal={toggleModal}/>}
                     <button
                         onClick={() => setShowModal2(true)}
                         className="md:text-lg text-sm font-semibold text-black bg-[#ff943c] md:w-28 md:h-12 rounded-xl flex items-center justify-center hover:bg-[#ff790a] shadow-md shadow-black  w-16 h-9"
                     >
                         Sign Up
                     </button>
-                    {showModal2 && <Signup onClose={() => setShowModal2(false)} />}
+                    {showModal2 && <Signup onClose={() => setShowModal2(false)} toggleModal={toggleModal}/>}
 
                 </div>
             </nav >
