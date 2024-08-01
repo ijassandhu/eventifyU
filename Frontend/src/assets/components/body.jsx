@@ -1,6 +1,6 @@
 import SPORTS from '/photos/SPORTS.jpg';
 import SCIENCEDAY from '/photos/SCIENCEDAY.jpg';
-import PARIVARTAN from '/photos/PARIVARTAN.jpg';
+import PARIVARTAN from '/photos/PARIVARTAN.jpg';                
 import team from "/photos/team.svg";
 import Footer from './footer';
 import { Link } from "react-router-dom"
@@ -55,8 +55,35 @@ const data = [
         infinite: true,
         speed: 500,
         slidesToShow: 3,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                initialSlide: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
       };
+    
     return (
         <>
             <div className="hero-section" id='home'>
@@ -95,29 +122,22 @@ const data = [
                     </div>
                 </div>
 
-                <div className='bg-[#e3e0e0] py-12'>
-                    <h1 className='text-3xl md:text-5xl text-center pb-6'>
+                <div className='bg-[#2b2b2b] py-12'>
+                    <h1 className='text-3xl md:text-5xl text-center pb-6 text-white'>
                         About Us
                     </h1>
-                    <div className='text-center px-6 md:px-28'>
+                    <div className='text-center px-6 md:px-28 text-white'>
                         <h2 className='text-xl md:text-3xl'>Department of Student Welfare</h2>
-                        <p className='text-base md:text-xl pt-4 md:pt-8'>
+                        <p className='text-base md:text-xl pt-4 md:pt-8 text-white'>
                             The Department of Student Welfare (DSW) is the department that works for the student welfare. To make college life of students more valuable, educative, and enjoyable, it organizes various events in the college, handles the grievances, and much more. DSW has 8 clubs under it which handle various areas during competitions, festivals, and events. DSW has classified them for the interest of students to nurture their growth process.
                         </p>
                     </div>
 
-                    {/* <div className='flex flex-wrap justify-around mt-10 pb-10 gap-6 md:gap-10'>
-                        {clubImages.map((image, index) => (
-                            <div key={index} className='h-[30vh] md:h-[40vh] w-[70vw] md:w-[25vw] rounded-3xl flex justify-center items-center overflow-hidden hover:h-[35vh] md:hover:h-[45vh] duration-500'>
-                                <img src={image} alt="" className='rounded-3xl hover:shadow-2xl duration-500' />
-                            </div>
-                        ))}
-                    </div> */}
                     <div className='w-3/4 m-auto'>
                         <div className='mt-20'>
                         <Slider {...settings}>
-                            {data.map((d) => (
-                                <div className='bg-[#fff4f4] h-[450px] text-black rounded-xl'>
+                            {data.map((d,index) => (
+                                <div key={index} className='bg-[#fff4f4] h-[450px] text-black rounded-xl'>
                                     <div className='h-56 rounded-t-xl bg-indigo-500 flex justify-center items-center'>
                                         <img src={d.img } alt="" className='h-44 w-44  rounded-full' />
                                         </div>    
