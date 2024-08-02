@@ -9,20 +9,20 @@ const Feedback = () => {
                 <div className='hidden md:flex '>
                     <img src={opinions} alt="" className='h-[30rem] hover:h-[32rem] duration-500' />
                 </div>
-                <div className='flex flex-col md:flex-row gap-10 md:gap-5 justify-center md:justify-around items-center bg-white rounded-3xl'>
+                <div className='flex flex-col md:flex-row gap-10 md:gap-5 justify-center md:justify-around items-center bg-[#2B2B2B] rounded-3xl'>
                     <div className='flex justify-center md:justify-start'>
                         <div className='shadow-lg md:rounded-3xl p-8 md:p-5 w-[80vw] md:w-[30vw]'>
                             <div className='flex justify-center md:justify-start md:hidden'>
                                 <img src={opinions} alt="" className='h-48 md:h-80 hover:scale-110 transition-transform duration-500' />
                             </div>
-                            <h1 className='text-3xl md:text-2xl font-bold flex justify-center text-[#3F3D56] mb-6'>Feedback</h1>
+                            <h1 className='text-3xl md:text-2xl font-bold flex justify-center text-white mb-6'>Feedback</h1>
                             <form className='flex flex-col items-center'>
                                 <div className='flex flex-col gap-6 md:gap-8 w-full'>
                                     <input type="text" placeholder='Name' className='w-full h-12 rounded-xl p-4 text-gray-800 border border-gray-300 focus:outline-none focus:border-black transition duration-300' required />
                                     <input type="email" placeholder='Email' className='w-full h-12 rounded-xl p-4 text-gray-800 border border-gray-300 focus:outline-none focus:border-black transition duration-300' required />
                                     <textarea placeholder='Message' className='w-full h-32 rounded-xl p-4 text-gray-800 border border-gray-300 focus:outline-none focus:border-black transition duration-300' required />
                                 </div> 
-                                <button type='submit' className='bg-[#FF6363] text-white h-12 w-32 rounded-xl mt-6 hover:bg-[#ff3838] hover:shadow-xl transition-all duration-300 transform hover:scale-105'>Submit</button>
+                                <button type='submit' className='bg-[#99EA73] text-black h-12 w-32 rounded-xl mt-6 hover:bg-[#75ff35] hover:shadow-xl transition-all duration-300 transform hover:scale-105'>Submit</button>
                             </form>
                         </div>
                     </div>

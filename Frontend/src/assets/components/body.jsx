@@ -1,7 +1,7 @@
 import SPORTS from '/photos/SPORTS.jpg';
 import SCIENCEDAY from '/photos/SCIENCEDAY.jpg';
 import PARIVARTAN from '/photos/PARIVARTAN.jpg';                
-import team from "/photos/team.svg";
+import img from "/photos/img.svg";
 import Footer from './footer';
 import { Link } from "react-router-dom"
 import Footericons from './footericons';
@@ -95,7 +95,7 @@ const data = [
                         <h2 className="text-xl text-[#e6e6e6] mt-4 md:mt-12 font-medium px-8 md:px-2">Your Gateway to All Campus Activities and Events</h2>
                     </div>
                     <div className="flex justify-center md:justify-start">
-                        <img src={team} alt="" className='h-[280px] md:h-[480px] rounded-2xl md:mt-[15%] hover:h-[500px] duration-500' />
+                        <img src={img} alt="" className='h-[280px] md:h-[480px] rounded-2xl md:mt-[15%] hover:h-[500px] duration-500' />
                     </div>
                 </div>
 
@@ -122,7 +122,7 @@ const data = [
                     </div>
                 </div>
 
-                <div className='bg-[#2b2b2b] py-12'>
+                <div className='bg-[#2b2b2b] pt-12 pb-28'>
                     <h1 className='text-3xl md:text-5xl text-center pb-6 text-white'>
                         About Us
                     </h1>
@@ -137,15 +137,15 @@ const data = [
                         <div className='mt-20'>
                         <Slider {...settings}>
                             {data.map((d,index) => (
-                                <div key={index} className='bg-[#fff4f4] h-[450px] text-black rounded-xl'>
-                                    <div className='h-56 rounded-t-xl bg-indigo-500 flex justify-center items-center'>
+                                <div key={index} className='bg-[#fff4f4] h-[500px] text-black rounded-xl'>
+                                    <div className='h-56 rounded-t-xl bg-[#99EA73] flex justify-center items-center'>
                                         <img src={d.img } alt="" className='h-44 w-44  rounded-full' />
                                         </div>    
 
                                         <div className='flex flex-col justify-center items-center gap-4 p-4'>
                                             <p className='text-xl font-semibold'>{d.name}</p>
                                             <p>{d.description}</p>
-                                        <button className='bg-indigo-500 text-white text-lg px-6 py-1 rounded-xl h-12'>Read More</button>
+                                        <button className='bg-[#99EA73] text-lg px-6 py-1 rounded-xl h-12'>Read More</button>
                                         </div>
                                 </div>
                             ))}
