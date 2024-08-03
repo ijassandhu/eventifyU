@@ -25,11 +25,11 @@ export default function Signup({onClose, toggleModal}) {
               type="password"
               placeholder="Confirm password"
               required />
-            <button className="bg-[#ff7c11] h-10 w-24 rounded-2xl text-black hover:bg-[#ff9138]">SIGN UP</button>
+            <button className="bg-[#99EA73] h-10 w-24 rounded-2xl text-black hover:bg-[#75ff35]">SIGN UP</button>
           </form>
           <hr className="w-[100%] border border-gray-300"/>
           <div>
-          <p className="text-gray-500">Have an account? <button onClick={toggleModal} className="text-[#ff9138]">Sign in</button></p>
+          <p className="text-gray-500">Have an account? <button onClick={toggleModal} className="text-[#99EA73]">Sign in</button></p>
           </div>
         </div>
       </div>

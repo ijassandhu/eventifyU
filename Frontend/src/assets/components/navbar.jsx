@@ -14,7 +14,6 @@ const Navbar = () => {
         console.log('called')
         setShowModal2(!showModal2);
     }
-    // const [menuOpen, setMenuOpen] = useState(false);
 
     return (
         <div>
@@ -26,8 +25,8 @@ const Navbar = () => {
                 <ul className={'md:flex md:flex-row space-x-14 md:space-x-9 text-lg sm:text-md text-white hidden'}>
                     <li className="hover:text-red-500"><Link to="/">Home</Link></li>
                     <li className="hover:text-red-500"><Link to="/events">Events</Link></li>
-                    <li className="hover:text-red-500"><Link to="/clubs">Clubs</Link></li>
                     <li className="hover:text-red-500"><Link to="/dashboard">Dashboard</Link></li>
+                    <li className="hover:text-red-500"><Link to="/clubs">Clubs</Link></li>
                     <li className="hover:text-red-500"><Link to="/feedback">Feedback</Link></li>
                 </ul>
                 <div className="flex items-center gap-4">

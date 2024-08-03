@@ -9,6 +9,7 @@ import Footericons from './footericons';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import AutoType from './autotype';
 
 const data = [
     {
@@ -86,13 +87,17 @@ const data = [
     
     return (
         <>
+        
+      
             <div className="hero-section" id='home'>
                 <div className="hero-section1 flex flex-col md:flex-row gap-8 p-4 md:mt-20 mt-16 relative ">
                     <div className="md:h-[50%] md:w-[50%] md:p-28 flex flex-col text-center">
                         <h1 className="text-3xl md:w-[100%] md:text-5xl leading-tight font-bold p-10 md:p-0">
                             Welcome to Chandigarh Group of Colleges Events Hub.
                         </h1>
-                        <h2 className="text-xl text-[#e6e6e6] mt-4 md:mt-12 font-medium px-8 md:px-2">Your Gateway to All Campus Activities and Events</h2>
+                        <h2 className="text-xl text-[#e6e6e6] mt-4 md:mt-12 font-medium px-8 md:px-2">
+                        <AutoType/>
+                        </h2>
                     </div>
                     <div className="flex justify-center md:justify-start">
                         <img src={img} alt="" className='h-[280px] md:h-[480px] rounded-2xl md:mt-[15%] hover:h-[500px] duration-500' />
@@ -128,7 +133,7 @@ const data = [
                     </h1>
                     <div className='text-center px-6 md:px-28 text-white'>
                         <h2 className='text-xl md:text-3xl'>Department of Student Welfare</h2>
-                        <p className='text-base md:text-xl pt-4 md:pt-8 text-white'>
+                        <p className='text-base md:text-xl pt-4 md:pt-8 text-[#bcb5b5]'>
                             The Department of Student Welfare (DSW) is the department that works for the student welfare. To make college life of students more valuable, educative, and enjoyable, it organizes various events in the college, handles the grievances, and much more. DSW has 8 clubs under it which handle various areas during competitions, festivals, and events. DSW has classified them for the interest of students to nurture their growth process.
                         </p>
                     </div>
@@ -142,7 +147,7 @@ const data = [
                                         <img src={d.img } alt="" className='h-44 w-44  rounded-full' />
                                         </div>    
 
-                                        <div className='flex flex-col justify-center items-center gap-4 p-4'>
+                                        <div className='flex flex-col justify-center items-center gap-4 px-4'>
                                             <p className='text-xl font-semibold'>{d.name}</p>
                                             <p>{d.description}</p>
                                         <button className='bg-[#99EA73] text-lg px-6 py-1 rounded-xl h-12'>Read More</button>

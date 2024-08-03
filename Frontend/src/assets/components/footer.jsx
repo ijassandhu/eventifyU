@@ -2,7 +2,7 @@ export default function Footer() {
   return (
 
 
-    <footer className="bg-[#222] text-white py-8 mb-0 w-[100%]">
+    <footer className="bg-[#222] text-white py-8 mb-0 w-[100%]  ">
       <div className="container mx-auto flex flex-wrap justify-between items-center pl-36">
 
         <div className="w-full md:w-1/3 text-center md:text-left mb-6 md:mb-0">

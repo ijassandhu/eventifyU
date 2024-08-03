@@ -35,7 +35,7 @@ const data = [
   {
     img: `/photos/dummy.png`,
     name: `EVENT 6`,
-    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. At possimus illum  Excepturi quos officia saepe voluptatum, obcaecati explicabo corporis?`
+    description: `Lorem ipsum dolor sit amet, adipisicing elit. At possimus illum  Excepturi quos officia saepe voluptatum, obcaecati explicabo corporis?`
   },
   {
     img: `/photos/dummy.png`,
@@ -110,7 +110,7 @@ const Events = () => {
                   <h2 className='text-md font-bold text-center'>{m.name}</h2>
                   <h1 className='text-xs lg:text-md text-center'>{m.description}</h1>
                   <div className='flex justify-between'>
-                  <button className='bg-[#99EA73] h-10 w-28 rounded-2xl my-2 hover:bg-[#75ff35] hover:text-black'>Enroll Now</button>
+                  <button className='bg-[#99EA73] text-black h-10 w-28 rounded-2xl my-2 hover:bg-[#75ff35] transition-all duration-300 transform hover:scale-105'>Enroll Now</button>
                   <button onClick={() => check(index)}>{isBookmarked.includes(index) ? <BookmarkCheck /> : <Bookmark />}</button>
                   </div>
                  

@@ -19,13 +19,12 @@ export default function Login({onClose, toggleModal}) {
               type="password"
               placeholder="Enter your password"
               required />
-            <button className="bg-[#ff943c] h-10 w-24 rounded-2xl text-black hover:bg-[#ff9138]">SIGN IN</button>
-            <button className="text-[#ff7c11] hover:underline">Forget Password?</button>
+            <button className="bg-[#99EA73] h-10 w-24 rounded-2xl text-black hover:bg-[#6fff2c]">SIGN IN</button>
+            <button className="text-[#99EA73] hover:underline">Forget Password?</button>
           </form>
           <hr className="w-[100%] border border-gray-300"/>
           <div>
-          <p className="text-gray-500">Don't have account? <button onClick={toggleModal} className='text-[#ff9138]'>Sign up</button></p>
-          {/* <Link to="/signup">Sign Up</Link> */}
+          <p className="text-gray-500">Don't have account? <button onClick={toggleModal} className='text-[#99EA73]'>Sign up</button></p>
           </div>
         </div>
       </div>
