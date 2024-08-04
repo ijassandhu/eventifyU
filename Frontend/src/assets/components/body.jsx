@@ -100,7 +100,7 @@ const data = [
                         </h2>
                     </div>
                     <div className="flex justify-center md:justify-start">
-                        <img src={img} alt="" className='h-[280px] md:h-[480px] rounded-2xl md:mt-[15%] zhover:h-[500px] duration-500' />
+                        <img src={img} alt="" className='h-[280px] md:h-[480px] rounded-2xl md:mt-[15%] hover:h-[500px] duration-500' />
                     </div>
                 </div>
 
@@ -143,7 +143,7 @@ const data = [
                         <Slider {...settings}>
                             {data.map((d,index) => (
                                 <div key={index} className='bg-[#fff4f4] h-[500px] text-black rounded-xl'>
-                                    <div className='h-56 rounded-t-xl bg-[#99EA73] flex justify-center items-center'>
+                                    <div className='h-56 rounded-t-xl bg-[#262626] flex justify-center items-center'>
                                         <img src={d.img } alt="" className='h-44 w-44  rounded-full' />
                                         </div>    
 

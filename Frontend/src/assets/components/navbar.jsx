@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSearch } from "@fortawesome/free-solid-svg-icons"
-// import {searchOnclick} from './javascript/navbar.js'
 import { Link } from "react-router-dom"
 import { useState } from "react"
 import Login from "./Login.jsx"

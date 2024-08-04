@@ -48,7 +48,7 @@ const Clubs = () => {
   return (
     <>
       <div className="background min-h-screen bg-[#2b2b2b] pt-16 md:pt-20 flex flex-col items-center pb-20 md:pb-0">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-10">
           {clubs.map((club, index) => (
             <div
               key={index}
@@ -56,8 +56,8 @@ const Clubs = () => {
             >
               <div className="relative">
                 <img className="w-full h-48 object-cover" src={club.imgSrc} alt={club.name} />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-transparent to-transparent p-4">
-                  <h2 className="text-xl font-semibold text-white bg-black bg-opacity-50 p-2 rounded">{club.name}</h2>
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-transparent to-transparent p-4 flex">
+                  <h2 className="text-lg font-semibold text-white bg-black bg-opacity-50 p-2 rounded">{club.name}</h2>
                 </div>
               </div>
               <div className="p-4 bg-[#1f1f1f]">

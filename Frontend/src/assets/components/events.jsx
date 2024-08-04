@@ -100,7 +100,7 @@ const Events = () => {
 
       </div>
       <div>
-        <div className='hidden md:flex md:flex-wrap md:justify-around md:px-32 gap-y-24 pt-7 pb-10 bg-[#2b2b2b]'>
+        <div className='hidden md:flex md:flex-wrap md:justify-around md:px-32 gap-y-24 gap-x-6 pt-7 pb-10 bg-[#2b2b2b]'>
           {data.map((m, index) => (
             <div key={index}>
               <div className='w-[300px] text-ellipsis'>
