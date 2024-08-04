@@ -103,7 +103,7 @@ const Events = () => {
         <div className='hidden md:flex md:flex-wrap md:justify-around md:px-32 gap-y-24 pt-7 pb-10 bg-[#2b2b2b]'>
           {data.map((m, index) => (
             <div key={index}>
-              <div className='w-[300px]'>
+              <div className='w-[300px] text-ellipsis'>
                 <img src={m.img} alt="" className='rounded-t-3xl border hover:border-gray-500' />
                 
                 <div className='text-center px-3 text-white rounded-b-3xl border-2 hover:border-gray-500'>

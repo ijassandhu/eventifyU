@@ -100,7 +100,7 @@ const data = [
                         </h2>
                     </div>
                     <div className="flex justify-center md:justify-start">
-                        <img src={img} alt="" className='h-[280px] md:h-[480px] rounded-2xl md:mt-[15%] hover:h-[500px] duration-500' />
+                        <img src={img} alt="" className='h-[280px] md:h-[480px] rounded-2xl md:mt-[15%] zhover:h-[500px] duration-500' />
                     </div>
                 </div>
 

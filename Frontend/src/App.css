@@ -20,6 +20,11 @@
   color: aliceblue;
   height: calc(100vh - 5rem);
 }
+/* .background{
+  background-image: url('/photos/background.jpg');
+  background-size: cover;
+} */
+
 .text{
   font-family:'Open Sans' 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
 }
