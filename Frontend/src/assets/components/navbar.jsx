@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSearch } from "@fortawesome/free-solid-svg-icons"
-import { Link } from "react-router-dom"
-import { useState } from "react"
+import { Link , useLocation } from "react-router-dom"
+import { useEffect, useState } from "react"
 import Login from "./Login.jsx"
 import Signup from "./signup.jsx"
 
@@ -14,20 +14,34 @@ const Navbar = () => {
         setShowModal2(!showModal2);
     }
 
+const Location = useLocation();
+useEffect(()=> {},[Location]);
+
     return (
         <div>
             <nav className="flex bg-[#222] md:h-20 h-16 items-center fixed top-0 w-[100vw] z-10 justify-between md:justify-around px-4 md:px-0">
                 <div className="text-[#99EA73] text-2xl flex">
-                <h1>event</h1>
+                <h1>event</h1> 
                 <h1 className="text-white">ifyU</h1>
                 </div>
-                <ul className={'md:flex md:flex-row space-x-14 md:space-x-9 text-lg sm:text-md text-white hidden'}>
-                    <li className="hover:text-red-500"><Link to="/">Home</Link></li>
-                    <li className="hover:text-red-500"><Link to="/events">Events</Link></li>
-                    <li className="hover:text-red-500"><Link to="/dashboard">Dashboard</Link></li>
-                    <li className="hover:text-red-500"><Link to="/clubs">Clubs</Link></li>
-                    <li className="hover:text-red-500"><Link to="/feedback">Feedback</Link></li>
-                </ul>
+                <ul className="md:flex md:flex-row space-x-14 md:space-x-9 text-lg sm:text-md text-white hidden">
+    <li className={`hover:text-red-500 ${location.pathname === '/' ? 'text-red-500' : ''}`}>
+        <Link to="/">Home</Link>
+    </li>
+    <li className={`hover:text-red-500 ${location.pathname === '/events' ? 'text-red-500' : ''}`}>
+        <Link to="/events">Events</Link>
+    </li>
+    <li className={`hover:text-red-500 ${location.pathname === '/dashboard' ? 'text-red-500' : ''}`}>
+        <Link to="/dashboard">Dashboard</Link>
+    </li>
+    <li className={`hover:text-red-500 ${location.pathname === '/clubs' ? 'text-red-500' : ''}`}>
+        <Link to="/clubs">Clubs</Link>
+    </li>
+    <li className={`hover:text-red-500 ${location.pathname === '/feedback' ? 'text-red-500' : ''}`}>
+        <Link to="/feedback">Feedback</Link>
+    </li>
+</ul>
+
                 <div className="flex items-center gap-4">
                     <button
                         onClick={() => setShowModal(true)}
