@@ -16,7 +16,6 @@ const Navbar = () => {
 
 const Location = useLocation();
 useEffect(()=> {},[Location]);
-
     return (
         <div>
             <nav className="flex bg-[#222] md:h-20 h-16 items-center fixed top-0 w-[100vw] z-10 justify-between md:justify-around px-4 md:px-0">

@@ -1,124 +1,118 @@
 import React from 'react'
 import Footericons from './footericons'
-import { LayoutDashboard, Megaphone, BookA, BookmarkCheck } from 'lucide-react';
+import { LayoutDashboard, Megaphone, BookA, BookmarkCheck, CalendarCheck, LogOut } from 'lucide-react';
 import styles from './css/clubs.module.css';
-const user ={
+const user = {
   name: "Jaskeerat",
 }
+const DATE_OPTIONS = { weekday: 'long', month: 'short', day: 'numeric' };
 const Dashboard = () => {
   return (
     <>
-      {/* <div className='bg-[#2b2b2b] flex justify-center w-full px-16'>
-        <div className='pt-24 flex flex-col md:flex-row flex-wrap justify-evenly'>
-          <div className="inputParent wrap-input-2 p-2 md:p-3 flex flex-col">
-            <label htmlFor="name" className="text-white self-start md:text-lg">Name:</label>
-            <input
-              id="name"s
-              className="input pl-3 h-10 w-[80vw] md:w-[25vw] rounded-xl bg-[#2b2b2b] border border-white text-white"
-              type="text"
-              required
-            />
+      <div className='flex invisible md:visible bg-[#222]'>
+        <div className='hidden md:block h-[100vh]'>
+          <div className='w-[20vw] bg-[#2b2b2b] text-white flex flex-col mt-20 rounded-2xl ml-10 justify-center p-4'>
+            <h1 className='text-2xl'><strong>Hello,</strong> {user.name}👋🏻</h1>
+            <ul className='text-xl pt-5 flex flex-col'>
+              <div className='flex flex-row gap-2 rounded-2xl hover:bg-[#99EA73] hover:text-black h-12 w-[100%] items-center pl-2'>
+                <LayoutDashboard />
+                <li>Dashboard</li>
+              </div>
+              <div className='flex flex-row gap-2 rounded-2xl hover:bg-[#99EA73] hover:text-black h-12 w-[100%] items-center pl-2'>
+                <Megaphone />
+                <li>Announcements</li>
+              </div>
+              <div className='flex flex-row gap-2 rounded-2xl hover:bg-[#99EA73] hover:text-black h-12 w-[100%] items-center pl-2'>
+                <BookA />
+                <li>Attendance</li>
+              </div>
+              <div className='flex flex-row gap-2 rounded-2xl hover:bg-[#99EA73] hover:text-black h-12 w-[100%] items-center pl-2'>
+                <CalendarCheck />
+                <li>Enrolled Events</li>
+              </div>
+            </ul>
           </div>
-          <div className="inputParent wrap-input-2 p-2 md:p-3 flex flex-col">
-            <label className="text-white self-start md:text-lg">Email:</label>
-            <input
-              id="email"
-              className="input pl-3 h-10 w-[80vw] md:w-[25vw] rounded-xl bg-[#2b2b2b] border border-white text-white"
-              type="text"
-              required />
-          </div>
-          <div className="inputParent wrap-input-2 p-2 md:p-3 flex flex-col">
-            <label className="text-white self-start md:text-lg">Contact:</label>
-            <input
-              id="contact"
-              className="input pl-3 h-10 w-[80vw] md:w-[25vw] rounded-xl bg-[#2b2b2b] border border-white text-white"
-              type="number"
-              required
-            />
-          </div>
-
-          <div className="inputParent wrap-input-2 p-2 md:p-3 flex flex-col">
-            <label className="text-white self-start md:text-lg">Course:</label>
-            <input
-              id="contact"
-              className="input pl-3 h-10 w-[80vw] md:w-[25vw] rounded-xl bg-[#2b2b2b] border border-white text-white"
-              type="text"
-              required
-            />
-          </div>
-
-          <div className="inputParent wrap-input-2 p-2 md:p-3 flex flex-col">
-            <label className="text-white self-start md:text-lg">Department:</label>
-            <input
-              id="contact"
-              className="input pl-3 h-10 w-[80vw] md:w-[25vw] rounded-xl bg-[#2b2b2b] border border-white text-white"
-              type="text"
-              required
-            />
-          </div>
-          <div className="inputParent wrap-input-2 p-2 md:p-3 flex flex-col">
-            <label className="text-white self-start md:text-lg">Semester:</label>
-            <input
-              id="contact"
-              className="input pl-3 h-10 w-[80vw] md:w-[25vw] rounded-xl bg-[#2b2b2b] border border-white text-white"
-              type="text"
-              required
-            />
-          </div>
-
-          <div className="inputParent wrap-input-2 p-2 md:p-3 flex flex-col">
-            <label className="text-white self-start md:text-lg">College:</label>
-            <input
-              id="contact"
-              className="input pl-3 h-10 w-[80vw] md:w-[25vw] rounded-xl bg-[#2b2b2b] border border-white text-white"
-              type="text"
-              required
-            />
-          </div>
-
-          <div className="inputParent wrap-input-2 p-2 md:p-3 flex flex-col">
-            <label className="text-white self-start md:text-lg">Roll Number:</label>
-            <input
-              // defaultValue={value.rollNo}
-              id="contact"
-              className="input pl-3 h-10 w-[80vw] md:w-[25vw] rounded-xl bg-[#2b2b2b] border border-white text-white"
-              type="number"
-              required
-            />
-          </div>
-          <div className="inputParent wrap-input-2 p-2 md:p-3 flex flex-col">
-            <label className="text-white self-start md:text-lg">Section:</label>
-            <input
-              id="contact"
-              className="input pl-3 h-10 w-[80vw] md:w-[25vw] rounded-xl bg-[#2b2b2b] border border-white text-white"
-              type="number"
-              required
-            />
+          <div className='w-[20vw] bg-[#2b2b2b] text-white flex flex-col absolute bottom-4 rounded-2xl ml-10 justify-center p-4'>
+            <ul className='text-xl flex flex-col'>
+              <div className='flex flex-row gap-2 rounded-2xl h-12 w-[100%] items-center pl-2'>
+                <BookmarkCheck />
+                <li>Saved Events</li>
+              </div>
+              <div className='flex flex-row gap-2 rounded-2xl h-12 w-[100%] items-center pl-2'>
+                <LogOut />
+                <li>Log out</li>
+              </div>
+            </ul>
           </div>
         </div>
-      </div> */}
-      <div className='hidden md:block bg-[#222] h-[100vh]'>
-        <div className='w-[20vw] bg-[#2b2b2b] text-white flex flex-col mt-20 rounded-2xl ml-10 justify-center'>
-
-            <h1 className='text-2xl'>Hello! {user.name}</h1>
-          <ul className='text-xl pt-5 flex flex-col'>
-            <div className='flex flex-row gap-2 border-2 hover:border-[#75FF35] h-12 w-[100%] items-center'>
-            <LayoutDashboard/>
-            <li>Dashboard</li>
+        <div>
+          <div className='bg-[#2b2b2b] w-[70vw] rounded-2xl flex flex-col mt-20 ml-10 pb-7'>
+            <h1 className='text-xl text-gray-400 p-4'>{(new Date()).toLocaleDateString('en-US', DATE_OPTIONS)}</h1>
+            <h2 className='text-2xl text-white pl-4'>Student Complete Detail</h2>
+            <hr />
+            <div className='flex flex-col md:flex-row flex-wrap p-3'>
+              <div className="inputParent wrap-input-2 p-3 flex flex-col">
+                <label htmlFor="name" className="text-white self-start text-lg">Name:</label>
+                <input
+                  className="input pl-3 h-10 w-[80vw] md:w-[20vw] rounded-xl bg-[#2b2b2b] border border-white text-white"
+                  type="text"
+                  required
+                />
+              </div>
+              <div className="inputParent wrap-input-2 p-2 md:p-3 flex flex-col">
+                <label className="text-white self-start text-lg">Email:</label>
+                <input
+                  className="input pl-3 h-10 w-[20vw] rounded-xl bg-[#2b2b2b] border border-white text-white"
+                  type="text"
+                  required />
+              </div>
+              <div className="inputParent wrap-input-2 p-2 md:p-3 flex flex-col">
+                <label className="text-white self-start text-lg">Gender:</label>
+                <input
+                  className="input pl-3 h-10 w-[20vw] rounded-xl bg-[#2b2b2b] border border-white text-white"
+                  type="text"
+                  required
+                />
+              </div>
+              <div className="inputParent wrap-input-2 p-2 md:p-3 flex flex-col">
+                <label className="text-white self-start text-lg">Roll Number:</label>
+                <input
+                  // defaultValue={value.rollNo}
+                  className="input pl-3 h-10 w-[20vw] rounded-xl bg-[#2b2b2b] border border-white text-white"
+                  type="number"
+                  required
+                />
+              </div>
+              <div className="inputParent wrap-input-2 p-2 md:p-3 flex flex-col">
+                <label className="text-white self-start md:text-lg">Semester:</label>
+                <input
+                  className="input pl-3 h-10 w-[20vw] rounded-xl bg-[#2b2b2b] border border-white text-white"
+                  type="number"
+                  required
+                />
+              </div>
+              <div className="inputParent wrap-input-2 p-2 md:p-3 flex flex-col">
+                <label className="text-white self-start md:text-lg">Section:</label>
+                <input
+                  className="input pl-3 h-10 w-[20vw] rounded-xl bg-[#2b2b2b] border border-white text-white"
+                  type="text"
+                  required
+                />
+              </div>
+              <div className="inputParent wrap-input-2 p-2 md:p-3 flex flex-col">
+                <label className="text-white self-start md:text-lg">Contact:</label>
+                <input
+                  className="input pl-3 h-10 w-[20vw] rounded-xl bg-[#2b2b2b] border border-white text-white"
+                  type="number"
+                  required
+                />
+              </div>
+              <div />
             </div>
-            <div className='flex flex-row gap-2 border-2 hover:border-[#75FF35] h-12 w-[100%] items-center'>
-            <Megaphone/>
-            <li>Announcements</li>
-            </div>
-            <div className='flex flex-row gap-2 border-2 hover:border-[#75FF35] h-12 w-[100%] items-center'>
-            <BookA />
-            <li>Attendance</li>
-            </div>
-            <div className='flex flex-row gap-2 border-2 hover:border-[#75FF35] h-12 w-[100%] items-center'>
-            <BookmarkCheck/>
-            <li>Saved Events</li>
-            </div>
-          </ul>
+          </div>
+          <div className='ml-10 mt-10 bg-[#2b2b2b] rounded-xl h-[40vh]'>
+            
+          </div>
         </div>
       </div>
 
