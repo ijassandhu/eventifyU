@@ -46,15 +46,14 @@ const Dashboard = () => {
           </div>
         </div>
         <div>
-          <div className='bg-[#2b2b2b] w-[70vw] rounded-2xl flex flex-col mt-20 ml-10 pb-7'>
+          <div className='bg-[#2b2b2b] w-[70vw] rounded-2xl flex flex-col mt-20 ml-10 pb-7  '>
             <h1 className='text-xl text-gray-400 p-4'>{(new Date()).toLocaleDateString('en-US', DATE_OPTIONS)}</h1>
-            <h2 className='text-2xl text-white pl-4'>Student Complete Detail</h2>
+            <h2 className='text-2xl text-white pl-4'><span className='text-red-400'>*</span>Student Complete Detail</h2>
             <hr />
             <div className='flex flex-col md:flex-row flex-wrap p-3'>
               <div className="inputParent wrap-input-2 p-3 flex flex-col">
                 <label htmlFor="name" className="text-white self-start text-lg">Name:</label>
-                <input
-                  className="input pl-3 h-10 w-[80vw] md:w-[20vw] rounded-xl bg-[#2b2b2b] border border-white text-white"
+                <input className="input pl-3 h-10 w-[80vw] md:w-[20vw] rounded-xl bg-[#2b2b2b] border border-gray-400 text-white"
                   type="text"
                   required
                 />
@@ -62,14 +61,14 @@ const Dashboard = () => {
               <div className="inputParent wrap-input-2 p-2 md:p-3 flex flex-col">
                 <label className="text-white self-start text-lg">Email:</label>
                 <input
-                  className="input pl-3 h-10 w-[20vw] rounded-xl bg-[#2b2b2b] border border-white text-white"
+                  className="input pl-3 h-10 w-[20vw] rounded-xl bg-[#2b2b2b] border border-gray-400 text-white"
                   type="text"
                   required />
               </div>
               <div className="inputParent wrap-input-2 p-2 md:p-3 flex flex-col">
                 <label className="text-white self-start text-lg">Gender:</label>
                 <input
-                  className="input pl-3 h-10 w-[20vw] rounded-xl bg-[#2b2b2b] border border-white text-white"
+                  className="input pl-3 h-10 w-[20vw] rounded-xl bg-[#2b2b2b] border border-gray-400 text-white"
                   type="text"
                   required
                 />
@@ -78,7 +77,7 @@ const Dashboard = () => {
                 <label className="text-white self-start text-lg">Roll Number:</label>
                 <input
                   // defaultValue={value.rollNo}
-                  className="input pl-3 h-10 w-[20vw] rounded-xl bg-[#2b2b2b] border border-white text-white"
+                  className="input pl-3 h-10 w-[20vw] rounded-xl bg-[#2b2b2b] border border-gray-400 text-white"
                   type="number"
                   required
                 />
@@ -86,7 +85,7 @@ const Dashboard = () => {
               <div className="inputParent wrap-input-2 p-2 md:p-3 flex flex-col">
                 <label className="text-white self-start md:text-lg">Semester:</label>
                 <input
-                  className="input pl-3 h-10 w-[20vw] rounded-xl bg-[#2b2b2b] border border-white text-white"
+                  className="input pl-3 h-10 w-[20vw] rounded-xl bg-[#2b2b2b] border border-gray-400 text-white"
                   type="number"
                   required
                 />
@@ -94,7 +93,7 @@ const Dashboard = () => {
               <div className="inputParent wrap-input-2 p-2 md:p-3 flex flex-col">
                 <label className="text-white self-start md:text-lg">Section:</label>
                 <input
-                  className="input pl-3 h-10 w-[20vw] rounded-xl bg-[#2b2b2b] border border-white text-white"
+                  className="input pl-3 h-10 w-[20vw] rounded-xl bg-[#2b2b2b] border border-gray-400 text-white"
                   type="text"
                   required
                 />
@@ -102,16 +101,36 @@ const Dashboard = () => {
               <div className="inputParent wrap-input-2 p-2 md:p-3 flex flex-col">
                 <label className="text-white self-start md:text-lg">Contact:</label>
                 <input
-                  className="input pl-3 h-10 w-[20vw] rounded-xl bg-[#2b2b2b] border border-white text-white"
+                  className="input pl-3 h-10 w-[20vw] rounded-xl bg-[#2b2b2b] border border-gray-400 text-white"
                   type="number"
+                  required
+                />
+              </div>
+              <div className="inputParent wrap-input-2 p-2 md:p-3 flex flex-col">
+                <label className="text-white self-start md:text-lg">Degree:</label>
+                <input
+                  className="input pl-3 h-10 w-[20vw] rounded-xl bg-[#2b2b2b] border border-gray-400 text-white"
+                  type="text"
+                  required
+                />
+              </div>
+              <div className="inputParent wrap-input-2 p-2 md:p-3 flex flex-col">
+                <label className="text-white self-start md:text-lg">Branch:</label>
+                <input
+                  className="input pl-3 h-10 w-[20vw] rounded-xl bg-[#2b2b2b] border border-gray-400 text-white"
+                  type="text"
                   required
                 />
               </div>
               <div />
             </div>
+            <div className='flex justify-center'>
+              <button className='bg-red-500 h-12 w-40 text-xl rounded-xl font-medium hover:shadow-lg hover:shadow-red-800'>Save Details</button>
+            </div>
+
           </div>
           <div className='ml-10 mt-10 bg-[#2b2b2b] rounded-xl h-[40vh]'>
-            
+
           </div>
         </div>
       </div>
