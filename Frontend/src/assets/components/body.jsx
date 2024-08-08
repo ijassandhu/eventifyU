@@ -116,13 +116,13 @@ const data = [
 
                     <div className='clubsContainer flex flex-wrap justify-around gap-6 md:gap-10 mb-10 px-4'>
                         <div className="h-[35vh] w-[70vw] md:h-[45vh] md:w-[25vw] rounded-xl flex justify-center items-center">
-                            <img src={PARIVARTAN} alt="" className='rounded-xl hover:shadow-2xl' />
+                           <Link to={"/events"}> <img src={PARIVARTAN} alt="" className='rounded-xl hover:shadow-2xl' /></Link>
                         </div>
                         <div className="h-[35vh] w-[70vw] md:h-[45vh] md:w-[25vw] rounded-xl flex justify-center items-center">
-                            <img src={SPORTS} alt="" className='object-cover rounded-xl hover:shadow-2xl' />
+                            <Link to={"/events"}><img src={SPORTS} alt="" className='object-cover rounded-xl hover:shadow-2xl' /></Link>
                         </div>
                         <div className="h-[35vh] w-[70vw] md:h-[45vh] md:w-[25vw] rounded-xl flex justify-center items-center overflow-hidden hover:shadow-2xl">
-                            <img src={SCIENCEDAY} alt="" className='rounded-xl hover:shadow-2xl' />
+                            <Link to={"/events"}><img src={SCIENCEDAY} alt="" className='rounded-xl hover:shadow-2xl' /></Link>
                         </div>
                     </div>
                 </div>
@@ -150,7 +150,7 @@ const data = [
                                         <div className='flex flex-col justify-center items-center gap-4 px-4'>
                                             <p className='text-xl font-semibold'>{d.name}</p>
                                             <p>{d.description}</p>
-                                        <button className='bg-[#99EA73] text-lg px-6 py-1 rounded-xl h-12'>Read More</button>
+                                        <button className='bg-[#99EA73] text-lg px-6 py-1 rounded-xl h-12'><Link to="/clubs">Read More</Link></button>
                                         </div>
                                 </div>
                             ))}

@@ -1,7 +1,6 @@
 import React from 'react'
 import Footericons from './footericons'
 import { LayoutDashboard, Megaphone, BookA, BookmarkCheck, CalendarCheck, LogOut } from 'lucide-react';
-import styles from './css/clubs.module.css';
 const user = {
   name: "Jaskeerat",
 }
@@ -48,25 +47,25 @@ const Dashboard = () => {
         <div>
           <div className='bg-[#2b2b2b] w-[70vw] rounded-2xl flex flex-col mt-20 ml-10 pb-7  '>
             <h1 className='text-xl text-gray-400 p-4'>{(new Date()).toLocaleDateString('en-US', DATE_OPTIONS)}</h1>
-            <h2 className='text-2xl text-white pl-4'><span className='text-red-400'>*</span>Student Complete Detail</h2>
+            <h2 className='text-2xl text-white pl-4'>Student Complete Detail</h2>
             <hr />
             <div className='flex flex-col md:flex-row flex-wrap p-3'>
               <div className="inputParent wrap-input-2 p-3 flex flex-col">
-                <label htmlFor="name" className="text-white self-start text-lg">Name:</label>
+                <label htmlFor="name" className="text-white self-start text-lg"><span className='text-red-400'>*</span>Name:</label>
                 <input className="input pl-3 h-10 w-[80vw] md:w-[20vw] rounded-xl bg-[#2b2b2b] border border-gray-400 text-white"
                   type="text"
                   required
                 />
               </div>
               <div className="inputParent wrap-input-2 p-2 md:p-3 flex flex-col">
-                <label className="text-white self-start text-lg">Email:</label>
+                <label className="text-white self-start text-lg"><span className='text-red-400'>*</span>Email:</label>
                 <input
                   className="input pl-3 h-10 w-[20vw] rounded-xl bg-[#2b2b2b] border border-gray-400 text-white"
                   type="text"
                   required />
               </div>
               <div className="inputParent wrap-input-2 p-2 md:p-3 flex flex-col">
-                <label className="text-white self-start text-lg">Gender:</label>
+                <label className="text-white self-start text-lg"><span className='text-red-400'>*</span>Gender:</label>
                 <input
                   className="input pl-3 h-10 w-[20vw] rounded-xl bg-[#2b2b2b] border border-gray-400 text-white"
                   type="text"
@@ -74,7 +73,7 @@ const Dashboard = () => {
                 />
               </div>
               <div className="inputParent wrap-input-2 p-2 md:p-3 flex flex-col">
-                <label className="text-white self-start text-lg">Roll Number:</label>
+                <label className="text-white self-start text-lg"><span className='text-red-400'>*</span>Roll Number:</label>
                 <input
                   // defaultValue={value.rollNo}
                   className="input pl-3 h-10 w-[20vw] rounded-xl bg-[#2b2b2b] border border-gray-400 text-white"
@@ -83,7 +82,7 @@ const Dashboard = () => {
                 />
               </div>
               <div className="inputParent wrap-input-2 p-2 md:p-3 flex flex-col">
-                <label className="text-white self-start md:text-lg">Semester:</label>
+                <label className="text-white self-start md:text-lg"><span className='text-red-400'>*</span>Semester:</label>
                 <input
                   className="input pl-3 h-10 w-[20vw] rounded-xl bg-[#2b2b2b] border border-gray-400 text-white"
                   type="number"
@@ -91,7 +90,7 @@ const Dashboard = () => {
                 />
               </div>
               <div className="inputParent wrap-input-2 p-2 md:p-3 flex flex-col">
-                <label className="text-white self-start md:text-lg">Section:</label>
+                <label className="text-white self-start md:text-lg"><span className='text-red-400'>*</span>Section:</label>
                 <input
                   className="input pl-3 h-10 w-[20vw] rounded-xl bg-[#2b2b2b] border border-gray-400 text-white"
                   type="text"
@@ -99,7 +98,7 @@ const Dashboard = () => {
                 />
               </div>
               <div className="inputParent wrap-input-2 p-2 md:p-3 flex flex-col">
-                <label className="text-white self-start md:text-lg">Contact:</label>
+                <label className="text-white self-start md:text-lg"><span className='text-red-400'>*</span>Contact:</label>
                 <input
                   className="input pl-3 h-10 w-[20vw] rounded-xl bg-[#2b2b2b] border border-gray-400 text-white"
                   type="number"
@@ -107,7 +106,7 @@ const Dashboard = () => {
                 />
               </div>
               <div className="inputParent wrap-input-2 p-2 md:p-3 flex flex-col">
-                <label className="text-white self-start md:text-lg">Degree:</label>
+                <label className="text-white self-start md:text-lg"><span className='text-red-400'>*</span>Degree:</label>
                 <input
                   className="input pl-3 h-10 w-[20vw] rounded-xl bg-[#2b2b2b] border border-gray-400 text-white"
                   type="text"
@@ -115,7 +114,7 @@ const Dashboard = () => {
                 />
               </div>
               <div className="inputParent wrap-input-2 p-2 md:p-3 flex flex-col">
-                <label className="text-white self-start md:text-lg">Branch:</label>
+                <label className="text-white self-start md:text-lg"><span className='text-red-400'>*</span>Branch:</label>
                 <input
                   className="input pl-3 h-10 w-[20vw] rounded-xl bg-[#2b2b2b] border border-gray-400 text-white"
                   type="text"
@@ -125,7 +124,7 @@ const Dashboard = () => {
               <div />
             </div>
             <div className='flex justify-center'>
-              <button className='bg-red-500 h-12 w-40 text-xl rounded-xl font-medium hover:shadow-lg hover:shadow-red-800'>Save Details</button>
+              <button className='bg-[#99EA73] h-12 w-40 text-xl rounded-xl font-medium transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl animate-fadeInUp'>Save Details</button>
             </div>
 
           </div>
