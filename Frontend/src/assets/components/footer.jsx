@@ -16,10 +16,10 @@ export default function Footer() {
         <div className="w-full md:w-1/3 text-center md:text-left mb-6 md:mb-0 pl-32">
           <h4 className="text-xl font-bold mb-4">Quick Links</h4>
           <ul className="space-y-2">
-            <li><a href="#about" className="hover:underline">About Us</a></li>
-            <li><a href="#events" className="hover:underline">Events</a></li>
-            <li><a href="#contact" className="hover:underline">Contact</a></li>
-            <li><a href="#faq" className="hover:underline">FAQ</a></li>
+            <li><Link to="#about" className="hover:underline">About Us</Link></li>
+            <li><Link to="#events" className="hover:underline">Events</Link></li>
+            <li><Link to="#contact" className="hover:underline">Contact</Link></li>
+            <li><Link to="#faq" className="hover:underline">FAQ</Link></li>
           </ul>
         </div>
 

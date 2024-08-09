@@ -14,13 +14,6 @@ const NotFound = () => {
           Go Back to Home
         </Link>
       </div>
-      {/* <div className="mt-12">
-        <img
-          src="https://via.placeholder.com/400x300?text=Event+Image"
-          alt="Lost in the Events"
-          className="w-full max-w-sm md:max-w-md mx-auto"
-        />
-      </div> */}
     </div>
   );
 };
