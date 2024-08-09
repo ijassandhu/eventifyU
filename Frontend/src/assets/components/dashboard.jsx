@@ -1,5 +1,6 @@
 import React from 'react'
 import Footericons from './footericons'
+import Navbar from './navbar';
 import { LayoutDashboard, Megaphone, BookA, BookmarkCheck, CalendarCheck, LogOut } from 'lucide-react';
 const user = {
   name: "Jaskeerat",
@@ -8,6 +9,7 @@ const DATE_OPTIONS = { weekday: 'long', month: 'short', day: 'numeric' };
 const Dashboard = () => {
   return (
     <>
+    <Navbar/>
       <div className='flex invisible md:visible bg-[#222]'>
         <div className='hidden md:block h-[100vh]'>
           <div className='w-[20vw] bg-[#2b2b2b] text-white flex flex-col mt-20 rounded-2xl ml-10 justify-center p-4'>

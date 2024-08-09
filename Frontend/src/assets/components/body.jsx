@@ -3,6 +3,7 @@ import SCIENCEDAY from '/photos/SCIENCEDAY.jpg';
 import PARIVARTAN from '/photos/PARIVARTAN.jpg';                
 import img from "/photos/img.svg";
 import Footer from './footer';
+import Navbar from './navbar';
 import { Link } from "react-router-dom"
 import Footericons from './footericons';
 // import dummy from '/photos/dummy.png'
@@ -87,7 +88,7 @@ const data = [
     
     return (
         <>
-        
+        <Navbar/>
       
             <div className="hero-section" id='home'>
                 <div className="hero-section1 flex flex-col md:flex-row gap-8 p-4 md:mt-20 mt-16 relative ">

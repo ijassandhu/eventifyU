@@ -3,6 +3,8 @@ import { X } from 'lucide-react';
 
 export default function Login({onClose, toggleModal}) {
   return (
+    <>
+    <Navbar/>
     <div className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center">
       <div className="mt-10 flex flex-col gap-5 text-white">
         <button onClick={onClose} className="place-self-end"><X size={30} /></button>
@@ -29,5 +31,6 @@ export default function Login({onClose, toggleModal}) {
         </div>
       </div>
     </div>
+    </>
   )
 }

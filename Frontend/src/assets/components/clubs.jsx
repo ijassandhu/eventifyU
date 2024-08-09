@@ -1,5 +1,6 @@
 import React from 'react';
 import Footericons from './footericons';
+import Navbar from './navbar';
 
 const Clubs = () => {
   const clubs = [
@@ -47,6 +48,7 @@ const Clubs = () => {
 
   return (
     <>
+    <Navbar/>
       <div className="background min-h-screen bg-[#2b2b2b] pt-16 md:pt-20 flex flex-col items-center pb-20 md:pb-0">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-10">
           {clubs.map((club, index) => (

@@ -1,10 +1,12 @@
 import React from 'react'
 import opinions from "/photos/opinions.svg"
 import Footericons from './footericons'
+import Navbar from './navbar'
 
 const Feedback = () => {
     return (
         <div>
+            <Navbar/>
             <div className='feedback min-h-screen flex items-center justify-center md:justify-around md:p-28 md:mt-4 '>
                 <div className='hidden md:flex '>
                     <img src={opinions} alt="" className='h-[30rem] hover:h-[32rem] duration-500' />

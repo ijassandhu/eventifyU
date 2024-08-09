@@ -1,9 +1,8 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faSearch } from "@fortawesome/free-solid-svg-icons"
 import { Link, useLocation } from "react-router-dom"
 import { useEffect, useState } from "react"
 import Login from "./Login.jsx"
 import Signup from "./signup.jsx"
+// import Navbar from './navbar'
 
 const Navbar = () => {
     const [showModal, setShowModal] = useState(false);
@@ -11,7 +10,7 @@ const Navbar = () => {
     const toggleModal = () => {
         setShowModal(!showModal);   
         console.log('called')
-        setShowModal2(!showModal2);
+        setShowModal2(!showModal2); 
     }
 
     const Location = useLocation();
@@ -19,6 +18,7 @@ const Navbar = () => {
     const [isloggedin , setloggedin ] = useState(false);
     return (
         <div>
+            {/* <Navbar/> */}
             <nav className="flex bg-[#222] md:h-20 h-16 items-center fixed top-0 w-[100vw] z-10 justify-between md:justify-around px-4 md:px-0">
                 <div className="text-[#99EA73] text-2xl flex">
                     <h1>event</h1>
