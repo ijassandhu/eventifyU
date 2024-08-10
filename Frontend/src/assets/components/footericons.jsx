@@ -10,7 +10,7 @@ const Footericons = () => {
   const location = useLocation();
   return (
     <div>
-      <div className='h-20 w-[100vw] fixed bottom-0 bg-[#222] md:hidden flex items-center'>
+      <div className='h-20 w-[100vw] fixed bottom-0 bg-[#222] md:hidden flex items-center z-30'>
         <ul className={'flex md:flex-row lg:space-x-14 md:space-x-9 md:text-lg text-sm text-white w-[100%] '}>
           <div className='flex flex-row justify-around w-[100%]'>
             <div>
