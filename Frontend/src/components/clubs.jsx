@@ -13,27 +13,27 @@ const Clubs = () => {
     {
       imgSrc: "/photos/SPORTS.jpg",
       name: "Artistia Club",
-      club_tag: "artistia-club",
+      club_tag: "artistia",
     },
     {
       imgSrc: "/photos/SPORTS.jpg",
       name: "Pheonix Club",
-      club_tag: "tech-amigos",
+      club_tag: "pheonix",
     },
     {
       imgSrc: "/photos/SPORTS.jpg",
       name: "Pixel Club",
-      club_tag: "tech-amigos",
+      club_tag: "pixel",
     },
     {
       imgSrc: "/photos/SPORTS.jpg",
       name: "Rangmanch Club",
-      club_tag: "tech-amigos",
+      club_tag: "rangmanch",
     },
     {
       imgSrc: "/photos/SPORTS.jpg",
       name: "Eco Minions Club",
-      club_tag: "tech-amigos",
+      club_tag: "eco-minions",
     },
     {
       imgSrc: "/photos/SPORTS.jpg",
@@ -43,17 +43,17 @@ const Clubs = () => {
     {
       imgSrc: "/photos/SPORTS.jpg",
       name: "Champions Club",
-      club_tag: "tech-amigos",
+      club_tag: "champions",
     },
     {
       imgSrc: "/photos/SPORTS.jpg",
       name: "The Flaming Desire",
-      club_tag: "tech-amigos",
+      club_tag: "flaming-desire",
     },
     {
       imgSrc: "/photos/SPORTS.jpg",
       name: "Prayas Club",
-      club_tag: "tech-amigos",
+      club_tag: "prayas",
     },
   ];
 
