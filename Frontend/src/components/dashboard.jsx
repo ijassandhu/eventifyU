@@ -1,6 +1,7 @@
 import React from "react";
 import Footericons from "./footericons";
 import Navbar from "./navbar";
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import {
   LayoutDashboard,
@@ -19,6 +20,7 @@ const DATE_OPTIONS = { weekday: "long", month: "short", day: "numeric" };
 
 const Dashboard = () => {
   const location = useLocation();
+  const [isLoggedIn, setLoggedIn] = useState(true);
   return (
     <div>
       <Navbar />
@@ -62,17 +64,24 @@ const Dashboard = () => {
             </ul>
           </div>
           <div className="w-[20vw] bg-[#2b2b2b] text-white flex flex-col mt-auto rounded-2xl ml-10 p-4 shadow-lg">
-            <ul className="text-xl flex flex-col gap-4">
+            <ul className="text-xl flex flex-col">
               <div className="flex flex-row gap-2 items-center pl-2 rounded-2xl h-12 w-full cursor-pointer hover:text-black hover:bg-[#99EA73] transition duration-300 ease-in-out">
                 <BookmarkCheck />
                 <li>
                   <Link to="/saved">Saved Events</Link>
                 </li>
               </div>
-              <div className="flex flex-row gap-2 items-center pl-2 rounded-2xl h-12 w-full cursor-pointer hover:text-black hover:bg-[#99EA73] transition duration-300 ease-in-out">
-                <LogOut />
-                <li>Log out</li>
-              </div>
+              {isLoggedIn ? (
+                <button
+                  // onClick={setLoggedIn(false)}
+                  className="flex flex-row gap-2 items-center pl-2 rounded-2xl h-12 w-full cursor-pointer hover:text-black hover:bg-[#99EA73] transition duration-300 ease-in-out"
+                >
+                  <LogOut />
+                  <li>Log out</li>
+                </button>
+              ) : (
+                ""
+              )}
             </ul>
           </div>
         </div>
