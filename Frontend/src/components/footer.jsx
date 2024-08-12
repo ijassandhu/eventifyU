@@ -30,7 +30,7 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="#faq" className="hover:underline">
+              <Link to="/faq" className="hover:underline">
                 FAQ
               </Link>
             </li>

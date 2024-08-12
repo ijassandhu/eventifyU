@@ -66,7 +66,10 @@ const Events = () => {
     <div>
       <Navbar />
       <div className="pt-20 md:mb-0 bg-[#2b2b2b]">
-        <h1 className="text-center text-2xl font-semibold text-[#fff] mt-3 md:mt-5 md:text-3xl">
+        <h1
+          id="home"
+          className="text-center text-2xl font-semibold text-[#fff] mt-3 md:mt-5 md:text-3xl"
+        >
           Upcoming Events
         </h1>
         <h2 className="text-center mt-5 text-lg px-3 md:px-52 text-[#bcb5b5]">

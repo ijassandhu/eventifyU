@@ -6,6 +6,7 @@ import Signup from "./signup.jsx";
 import dummy from "/photos/dummy.png";
 
 const Navbar = () => {
+  const [active, setActive] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [showModal2, setShowModal2] = useState(false);
   const toggleModal = () => {
@@ -18,8 +19,8 @@ const Navbar = () => {
     window.scrollTo(0, 0);
   }, [location]);
 
-  const [isLoggedIn, setLoggedIn] = useState(true);
-  const user = { name: "Jaskeerat" };
+  const [isLoggedIn, setLoggedIn] = useState(false);
+  // const user = { name: "Jaskeerat" };
 
   return (
     <div>
@@ -56,7 +57,7 @@ const Navbar = () => {
           <div className="flex gap-4 right-5 absolute md:right-20">
             <button
               onClick={() => setShowModal(true)}
-              className="md:text-lg text-sm font-semibold text-[#99EA73] md:w-28 md:h-12 rounded-xl flex items-center justify-center border border-[#99EA73] hover:bg-[#99EA73] hover:text-black transition-all duration-300 w-16 h-9 shadow-md shadow-[#99EA73]"
+              className="md:text-lg text-sm font-semibold text-[#99EA73] md:w-28 md:h-12 rounded-xl flex items-center justify-center border border-[#99EA73] hover:shadow-black transition-all duration-300 w-16 h-9 shadow-md shadow-[#99EA73]"
             >
               Sign In
             </button>
@@ -86,14 +87,26 @@ const Navbar = () => {
               {location.pathname === "/clubs" ||
               location.pathname === "/events" ? (
                 <>
-                  <div className="flex">
-                    <input
-                      type="text"
-                      placeholder="Search..."
-                      className="p-2 outline-none w-28 md:w-40 rounded-l-md h-8 bg-[#fff] text-black text-sm"
-                    />
-                    <div className="text-black border bg-white h-8 w-8 text-sm rounded-r-md flex items-center justify-center">
-                      <Search />
+                  <div>
+                    <div
+                      className={`relative h-12 ${
+                        active ? "w-56" : "w-12"
+                      } transition-all duration-300`}
+                    >
+                      <input
+                        type="text"
+                        className={`bg-white border-0 text-lg p-3 h-full rounded-full 
+          ${active ? "w-full pl-12" : "w-0"} 
+          transition-all duration-300 ease-in-out focus:outline-none`}
+                        placeholder="Search..."
+                      />
+                      <button
+                        className="absolute top-0 left-0 w-12 h-12 bg-white rounded-full text-xl flex justify-center items-center 
+          transition-transform duration-300 ease-in-out"
+                        onClick={() => setActive(!active)}
+                      >
+                        <Search />
+                      </button>
                     </div>
                   </div>
                 </>
