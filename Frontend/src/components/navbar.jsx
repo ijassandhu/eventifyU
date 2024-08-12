@@ -89,19 +89,19 @@ const Navbar = () => {
                 <>
                   <div>
                     <div
-                      className={`relative h-12 ${
-                        active ? "w-56" : "w-12"
+                      className={`relative h-10 md:h-12 ${
+                        active ? "w-48 md:w-56" : "w-12"
                       } transition-all duration-300`}
                     >
                       <input
                         type="text"
-                        className={`bg-white border-0 text-lg p-3 h-full rounded-full 
+                        className={`bg-[#222] border border-white text-lg p-3 h-full rounded-full text-white 
           ${active ? "w-full pl-12" : "w-0"} 
           transition-all duration-300 ease-in-out focus:outline-none`}
                         placeholder="Search..."
                       />
                       <button
-                        className="absolute top-0 left-0 w-12 h-12 bg-white rounded-full text-xl flex justify-center items-center 
+                        className="absolute top-0 left-0 h-10 md:h-12 bg-[#222] rounded-full text-xl flex justify-center items-center text-white
           transition-transform duration-300 ease-in-out"
                         onClick={() => setActive(!active)}
                       >
