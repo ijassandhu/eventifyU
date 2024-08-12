@@ -38,7 +38,9 @@ const Navbar = () => {
               <li
                 key={index}
                 className={`hover:text-[#99EA73] transition-colors duration-300 ${
-                  location.pathname === path ? "text-[#99EA73]" : ""
+                  location.pathname.split("/").slice(0, 2).join("/") === path
+                    ? "text-[#99EA73]"
+                    : ""
                 }`}
               >
                 <Link to={path}>
@@ -50,8 +52,8 @@ const Navbar = () => {
             )
           )}
         </ul>
-        {!isLoggedIn ? (
-          <div className="flex items-center gap-4">
+        {isLoggedIn ? (
+          <div className="flex gap-4 right-5 absolute md:right-20">
             <button
               onClick={() => setShowModal(true)}
               className="md:text-lg text-sm font-semibold text-[#99EA73] md:w-28 md:h-12 rounded-xl flex items-center justify-center border border-[#99EA73] hover:bg-[#99EA73] hover:text-black transition-all duration-300 w-16 h-9 shadow-md shadow-[#99EA73]"
@@ -78,7 +80,7 @@ const Navbar = () => {
             )}
           </div>
         ) : (
-          <div className="flex items-center absolute right-20">
+          <div className="flex items-center absolute right-5 md:right-20">
             {/* <h1 className="hidden md:block text-white text-sm md:text-xl">Hello! {user.name}</h1> */}
             <div>
               {location.pathname === "/clubs" ||
@@ -100,7 +102,7 @@ const Navbar = () => {
               )}
             </div>
 
-            <div className="relative group pl-4">
+            <div className="relative group md:pl-4">
               <img
                 src={dummy}
                 alt="User Avatar"

@@ -63,7 +63,7 @@ const Clubs = () => {
       <div className="background min-h-screen bg-[#2b2b2b] pt-16 md:pt-20 flex flex-col items-center pb-20 md:pb-0">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-10">
           {clubs.map((club, index) => (
-            <Link to={`/club/${club.club_tag}`}>
+            <Link to={`/clubs/${club.club_tag}`}>
               <div
                 key={index}
                 className="max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl animate-fadeInUp"

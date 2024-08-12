@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { club_collection } from "./club_collection";
 import Navbar from "../navbar";
 import NotFound from "../notfound";
+import Footericons from "../footericons";
 
 export default function ClubTemplate() {
   const { club_tag } = useParams();
@@ -16,38 +17,15 @@ export default function ClubTemplate() {
   }
   return (
     <>
-      <Navbar></Navbar>
-      <div className="mt-20 md:mt-24 flex">
-        Name: {clubDetail.name}
-        <br />
-        Description: {clubDetail.short_desc}
+      <Navbar />
+      <div className="bg-[#2b2b2b] h-[100vh] pt-20">
+        <div className="flex text-white">
+          Name: {clubDetail.name}
+          <br />
+          Description: {clubDetail.short_desc}
+        </div>
       </div>
+      <Footericons />
     </>
   );
 }
-// import { useParams } from react-router-dom;
-// import NotFound from "../notfound";
-// import { club_collection } from "./club_collection";
-
-// export default function ClubTemplate(){
-//   const { club_tag } = useParams();
-//   const clubDetail = club_collection[club_tag];
-
-//   if(clubDetail === undefined) {
-//     return (
-//       <>
-//       <NotFound />
-//       </>
-//     );
-//   }
-//   return (
-//     <>
-//     <Navbar/>
-//     <div className="mt-20 md:mt-24 flex">
-//          Name: {clubDetail.name}
-//          <br />
-//          Description: {clubDetail.short_desc}
-//        </div>
-//     </>
-//   )
-// }
