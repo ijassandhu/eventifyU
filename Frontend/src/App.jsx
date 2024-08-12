@@ -10,16 +10,17 @@ import Feedback from "./components/feedback.jsx";
 import Dashboard from "./components/dashboard.jsx";
 import NotFound from "./components/notfound.jsx";
 import ClubTemplate from "./components/clubs/clubtemplate.jsx";
+import FAQ from "./components/faq.jsx";
 
-window.addEventListener("resize", () => {
-  if (window.innerHeight < window.outerHeight) {
-    // Keyboard is open
-    footer.style.position = "static"; // Hide footer
-  } else {
-    // Keyboard is closed
-    footer.style.bottom = "0"; // Show footer
-  }
-});
+// window.addEventListener("resize", () => {
+//   if (window.innerHeight < window.outerHeight) {
+//     // Keyboard is open
+//     footer.style.position = "static"; // Hide footer
+//   } else {
+//     // Keyboard is closed
+//     footer.style.bottom = "0"; // Show footer
+//   }
+// });
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/feedback" element={<Feedback />} />
         <Route path="/clubs/:club_tag" element={<ClubTemplate />} />
+        <Route path="/faq" element={<FAQ />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
