@@ -19,7 +19,7 @@ const Navbar = () => {
     window.scrollTo(0, 0);
   }, [location]);
 
-  const [isLoggedIn, setLoggedIn] = useState(false);
+  const [isLoggedIn, setLoggedIn] = useState(true);
   // const user = { name: "Jaskeerat" };
 
   return (
@@ -95,13 +95,13 @@ const Navbar = () => {
                     >
                       <input
                         type="text"
-                        className={`bg-[#222] border border-white text-lg p-3 h-full rounded-full text-white 
-          ${active ? "w-full pl-12" : "w-0"} 
+                        className={`bg-[#222] text-lg p-3 h-full rounded-full text-white 
+          ${active ? "w-full pl-12 border border-white" : "w-0"} 
           transition-all duration-300 ease-in-out focus:outline-none`}
                         placeholder="Search..."
                       />
                       <button
-                        className="absolute top-0 left-0 h-10 md:h-12 bg-[#222] rounded-full text-xl flex justify-center items-center text-white
+                        className="absolute pl-2 top-0 left-0 h-10 md:h-12 rounded-full text-xl flex justify-center items-center text-white
           transition-transform duration-300 ease-in-out"
                         onClick={() => setActive(!active)}
                       >
