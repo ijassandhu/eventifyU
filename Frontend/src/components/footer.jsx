@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Mail } from "lucide-react";
 export default function Footer() {
   return (
     <footer id="footer" className="bg-[#222] text-white py-8 mb-0 w-[100%]  ">
@@ -20,12 +21,12 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="#events" className="hover:underline">
+              <Link to="/events" className="hover:underline">
                 Events
               </Link>
             </li>
             <li>
-              <Link to="#contact" className="hover:underline">
+              <Link to="/contact" className="hover:underline">
                 Contact
               </Link>
             </li>
@@ -39,14 +40,14 @@ export default function Footer() {
 
         <div className="w-full md:w-1/3 text-center md:text-left pl-10">
           <h4 className="text-xl font-bold mb-4">Connect with Us</h4>
-          <div className="flex justify-center md:justify-start space-x-4 mb-4">
+          {/* <div className="flex justify-center md:justify-start space-x-4 mb-4">
             <a href="https://facebook.com" target="_blank"></a>
             <a href="https://twitter.com" target="_blank"></a>
             <a href="https://instagram.com" target="_blank"></a>
             <a href="https://linkedin.com" target="_blank"></a>
-          </div>
-          <p className="text-gray-400">
-            <i className="fas fa-envelope"></i>{" "}
+          </div> */}
+          <p className="text-gray-400 flex flex-row gap-1">
+            <Mail />
             <a href="mailto:events@college.edu" className="hover:underline">
               events@college.edu
             </a>
