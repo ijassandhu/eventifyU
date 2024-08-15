@@ -10,6 +10,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import AutoType from "./autotype";
+import BoxReveal from "./boxreveal";
+import WordPullUp from "./wordpullup";
 
 const data = [
   {
@@ -58,7 +60,7 @@ function Body() {
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1024, // Large screens
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
@@ -67,15 +69,16 @@ function Body() {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 768, // Medium screens
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 2, // Show 2 slides on medium screens
           slidesToScroll: 2,
-          initialSlide: 2,
+          infinite: true,
+          dots: true,
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 480, // Small screens
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -89,20 +92,50 @@ function Body() {
       <Navbar />
 
       <div className="hero-section" id="home">
-        <div className="hero-section1 flex flex-col md:flex-row gap-8 p-4 md:mt-20 mt-16 relative ">
-          <div className="md:h-[50%] md:w-[50%] md:p-28 flex flex-col text-center">
-            <h1 className="text-3xl md:w-[100%] md:text-5xl leading-tight font-bold p-10 md:p-0">
-              Welcome to Chandigarh Group of Colleges Events Hub.
-            </h1>
-            <h2 className="text-xl text-[#e6e6e6] mt-4 md:mt-12 font-medium px-8 md:px-2">
+        <div className="hero-section1 flex flex-col md:flex-row gap-8 p-4 md:mt-20 mt-16 relative">
+          <div className="md:w-[50%] md:p-12 flex flex-col text-center  pt-20 md:pt-28">
+            <BoxReveal
+              width="100%"
+              height="auto"
+              boxColor="#99EA73"
+              duration={1}
+            >
+              <div>
+                <h1 className="text-white text-2xl md:text-5xl font-bold">
+                  Welcome to Chandigarh Group of Colleges Events Hub.
+                </h1>
+                <p className="text-white text-xl md:text-2xl mt-4">
+                  Discover and join the latest college events!
+                </p>
+              </div>
+            </BoxReveal>
+            {/* <WordPullUp
+              words="Welcome to Chandigarh Group of Colleges Events Hub."
+              wrapperFramerProps={{
+                hidden: { opacity: 0 },
+                show: {
+                  opacity: 1,
+                  transition: {
+                    staggerChildren: 0.2,
+                  },
+                },
+              }}
+              framerProps={{
+                hidden: { y: 20, opacity: 0 },
+                show: { y: 0, opacity: 1 },
+              }}
+              className="text-white text-3xl md:text-2xl lg:text-3xl font-bold"
+            /> */}
+
+            <h2 className="text-xl md:text-2xl text-[#e6e6e6] mt-4 md:mt-8 lg:mt-12 font-medium px-8 md:px-2">
               <AutoType />
             </h2>
           </div>
-          <div className="flex justify-center md:justify-start">
+          <div className="flex justify-center md:justify-start pt-16 md:pt-32">
             <img
               src={img}
-              alt=""
-              className="h-[280px] md:h-[480px] rounded-2xl md:mt-[15%] hover:h-[500px] duration-500"
+              alt="Event Illustration"
+              className="h-[180px] md:h-[360px] lg:h-[480px] rounded-2xl hover:h-[500px] duration-500"
             />
           </div>
         </div>
@@ -127,10 +160,9 @@ function Body() {
           <div className="clubsContainer flex flex-wrap justify-around gap-6 md:gap-10 mb-10 px-4">
             <div className="h-[35vh] w-[70vw] md:h-[45vh] md:w-[25vw] rounded-xl flex justify-center items-center">
               <Link to={"/events"}>
-                {" "}
                 <img
                   src={PARIVARTAN}
-                  alt=""
+                  alt="Parivartan Event"
                   className="rounded-xl hover:shadow-2xl"
                 />
               </Link>
@@ -139,7 +171,7 @@ function Body() {
               <Link to={"/events"}>
                 <img
                   src={SPORTS}
-                  alt=""
+                  alt="Sports Event"
                   className="object-cover rounded-xl hover:shadow-2xl"
                 />
               </Link>
@@ -148,7 +180,7 @@ function Body() {
               <Link to={"/events"}>
                 <img
                   src={SCIENCEDAY}
-                  alt=""
+                  alt="Science Day Event"
                   className="rounded-xl hover:shadow-2xl"
                 />
               </Link>
@@ -186,8 +218,8 @@ function Body() {
                     <div className="h-56 rounded-t-xl bg-[#262626] flex justify-center items-center">
                       <img
                         src={d.img}
-                        alt=""
-                        className="h-44 w-44  rounded-full"
+                        alt={`${d.name} Club`}
+                        className="h-44 w-44 rounded-full"
                       />
                     </div>
 
@@ -214,4 +246,5 @@ function Body() {
     </>
   );
 }
+
 export default Body;
