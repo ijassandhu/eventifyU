@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Footericons from "./footericons";
-import dummy from "/photos/dummy.png";
 import Navbar from "./navbar";
+import WordPullUp from "./wordpullup";
 import { Bookmark } from "lucide-react";
 import { BookmarkCheck } from "lucide-react";
 
@@ -66,11 +66,24 @@ const Events = () => {
     <div>
       <Navbar />
       <div className="pt-20 md:mb-0 bg-[#2b2b2b]">
-        <h1
-          id="home"
-          className="text-center text-2xl font-semibold text-[#fff] mt-3 md:mt-5 md:text-3xl"
-        >
-          Upcoming Events
+        <h1 className="text-center font-semibold text-[#fff] mt-3 md:mt-8">
+          <WordPullUp
+            words="Upcoming Events"
+            wrapperFramerProps={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+                transition: {
+                  staggerChildren: 0.2,
+                },
+              },
+            }}
+            framerProps={{
+              hidden: { y: 20, opacity: 0 },
+              show: { y: 0, opacity: 1 },
+            }}
+            className="text-white text-3xl md:text-2xl lg:text-3xl font-bold"
+          />
         </h1>
         <h2 className="text-center mt-5 text-lg px-3 md:px-52 text-[#bcb5b5]">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
@@ -132,7 +145,7 @@ const Events = () => {
                     {m.description}
                   </h1>
                   <div className="flex justify-between">
-                    <button className="bg-[#99EA73] text-black h-10 w-28 rounded-2xl my-2 hover:bg-[#75ff35] transition-all duration-300 transform hover:scale-105">
+                    <button className="bg-[#99EA73] text-black h-10 w-28 rounded-2xl my-2 hover:bg-[] transition-all duration-300 transform hover:scale-105">
                       Enroll Now
                     </button>
                     <button onClick={() => check(index)}>
@@ -144,10 +157,6 @@ const Events = () => {
                     </button>
                   </div>
                 </div>
-
-                <div></div>
-
-                <div></div>
               </div>
             </div>
           ))}
