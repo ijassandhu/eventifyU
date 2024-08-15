@@ -10,6 +10,7 @@ import Feedback from "./components/feedback.jsx";
 import Dashboard from "./components/dashboard.jsx";
 import NotFound from "./components/Notfound.jsx";
 import ClubTemplate from "./components/clubs/clubtemplate.jsx";
+import Contact from "./components/contactus.jsx";
 import FAQ from "./components/faq.jsx";
 
 // window.addEventListener("resize", () => {
@@ -34,6 +35,7 @@ function App() {
         <Route path="/feedback" element={<Feedback />} />
         <Route path="/clubs/:club_tag" element={<ClubTemplate />} />
         <Route path="/faq" element={<FAQ />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
