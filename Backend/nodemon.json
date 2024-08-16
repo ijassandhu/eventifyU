@@ -1,5 +1,11 @@
 {
-  "watch": ["src"],
+  "watch": [
+    "src"
+  ],
   "ext": ".ts,.js",
-  "exec": "ts-node ./src/index.ts"
+  "exec": "ts-node ./src/index.ts",
+  "env": {
+    "PORT": 1234,
+    "authSecret": "ooicn398u485p0pp30129iepklfmdlfpwo09ir9oefnvflvepr23i40128hfernkbprpri412373iuhiuenvfdmbflb23RUOIG"
+  }
 }
