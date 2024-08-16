@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Footericons from "./footericons";
 import Navbar from "./navbar";
-import WordPullUp from "./wordpullup";
+import WordPullUp from "../magic.ui/wordpullup";
 import { Bookmark } from "lucide-react";
 import { BookmarkCheck } from "lucide-react";
 

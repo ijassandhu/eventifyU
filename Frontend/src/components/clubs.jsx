@@ -1,6 +1,7 @@
 import React from "react";
 import Footericons from "./footericons";
 import Navbar from "./navbar";
+import WordPullUp from "../magic.ui/wordpullup";
 import { Link } from "react-router-dom";
 
 const Clubs = () => {
@@ -61,13 +62,44 @@ const Clubs = () => {
     <>
       <Navbar />
       <div className="background min-h-screen bg-[#2b2b2b] pt-16 md:pt-20 flex flex-col items-center pb-20 md:pb-0">
+        {/* Introductory Content */}
+        <div className="text-center text-white max-w-3xl mb-10 px-6 md:px-0">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4 pt-10">
+            <WordPullUp
+              words="Explore Our Clubs"
+              wrapperFramerProps={{
+                hidden: { opacity: 0 },
+                show: {
+                  opacity: 1,
+                  transition: {
+                    staggerChildren: 0.2,
+                  },
+                },
+              }}
+              framerProps={{
+                hidden: { y: 20, opacity: 0 },
+                show: { y: 0, opacity: 1 },
+              }}
+              className="text-white text-3xl md:text-2xl lg:text-3xl font-bold"
+            />
+          </h1>
+
+          <p className="text-lg">
+            At Chandigarh Group of Colleges, the Department of Student Welfare
+            (DSW) manages a diverse range of clubs catering to different student
+            interests. These clubs are integral to our vibrant campus life,
+            organizing events that provide students with opportunities to grow,
+            network, and showcase their talents. Whether you're into technology,
+            arts, sports, or culture, there’s a club for you. Dive in and
+            discover the community that suits your passions!
+          </p>
+        </div>
+
+        {/* Club Listings */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-10">
           {clubs.map((club, index) => (
-            <Link to={`/clubs/${club.club_tag}`}>
-              <div
-                key={index}
-                className="max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl animate-fadeInUp"
-              >
+            <Link to={`/clubs/${club.club_tag}`} key={index}>
+              <div className="max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl animate-fadeInUp">
                 <div className="relative">
                   <img
                     className="w-full h-48 object-cover"

@@ -9,9 +9,8 @@ import Footericons from "./footericons";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import AutoType from "./autotype";
-import BoxReveal from "./boxreveal";
-import WordPullUp from "./wordpullup";
+import AutoType from "../magic.ui/autotype";
+import BoxReveal from "../magic.ui/boxreveal";
 
 const data = [
   {
@@ -97,7 +96,7 @@ function Body() {
             <BoxReveal
               width="100%"
               height="auto"
-              boxColor="#99EA73"
+              boxColor="#2b2b2b"
               duration={1}
             >
               <div>
@@ -109,23 +108,6 @@ function Body() {
                 </p>
               </div>
             </BoxReveal>
-            {/* <WordPullUp
-              words="Welcome to Chandigarh Group of Colleges Events Hub."
-              wrapperFramerProps={{
-                hidden: { opacity: 0 },
-                show: {
-                  opacity: 1,
-                  transition: {
-                    staggerChildren: 0.2,
-                  },
-                },
-              }}
-              framerProps={{
-                hidden: { y: 20, opacity: 0 },
-                show: { y: 0, opacity: 1 },
-              }}
-              className="text-white text-3xl md:text-2xl lg:text-3xl font-bold"
-            /> */}
 
             <h2 className="text-xl md:text-2xl text-[#e6e6e6] mt-4 md:mt-8 lg:mt-12 font-medium px-8 md:px-2">
               <AutoType />
@@ -142,19 +124,35 @@ function Body() {
 
         <div className="hero-section2">
           <div className="mt-16 px-4">
-            <h1 className="text-3xl md:text-5xl text-center my-2 font-normal text-black">
-              Discover Upcoming Events
+            <h1 className="text-3xl md:text-5xl text-center font-normal text-black">
+              <BoxReveal
+                width="100%"
+                height="auto"
+                boxColor="#fff"
+                duration={1}
+              >
+                <div>
+                  <h1 className="text-[#2b2b2b] text-2xl md:text-5xl font-bold">
+                    Discover Upcoming Events
+                  </h1>
+                </div>
+              </BoxReveal>
             </h1>
-            <p className="p-4 md:p-14 text-base md:text-xl text-center">
-              "Welcome to the Chandigarh Group of Colleges Events Portal, your
-              ultimate destination for all things happening on campus. Discover
-              upcoming events, explore past highlights, and connect with the
-              vibrant clubs that make our college community thrive. Whether
-              you’re looking to join a new club, attend an exciting event, or
-              stay updated with the latest happenings, our platform is here to
-              keep you informed and engaged. Join us in celebrating the spirit
-              of our college and making every moment count!"
-            </p>
+            <BoxReveal width="100%" height="auto" boxColor="#fff" duration={1}>
+              <div>
+                <p className="p-2 md:p-14 text-base md:text-xl text-center">
+                  "Welcome to the Chandigarh Group of Colleges Events Portal,
+                  your ultimate destination for all things happening on campus.
+                  Discover upcoming events, explore past highlights, and connect
+                  with the vibrant clubs that make our college community thrive.
+                  Whether you’re looking to join a new club, attend an exciting
+                  event, or stay updated with the latest happenings, our
+                  platform is here to keep you informed and engaged. Join us in
+                  celebrating the spirit of our college and making every moment
+                  count!"
+                </p>
+              </div>
+            </BoxReveal>
           </div>
 
           <div className="clubsContainer flex flex-wrap justify-around gap-6 md:gap-10 mb-10 px-4">
@@ -190,7 +188,18 @@ function Body() {
 
         <div className="bg-[#2b2b2b] pt-12 pb-28">
           <h1 className="text-3xl md:text-5xl text-center pb-6 text-white">
-            About Us
+            <BoxReveal
+              width="100%"
+              height="auto"
+              boxColor="#2b2b2b"
+              duration={1}
+            >
+              <div>
+                <h1 className="text-[#fff] text-2xl md:text-5xl font-bold">
+                  About Us
+                </h1>
+              </div>
+            </BoxReveal>
           </h1>
           <div className="text-center px-6 md:px-28 text-white">
             <h2 className="text-xl md:text-3xl">
