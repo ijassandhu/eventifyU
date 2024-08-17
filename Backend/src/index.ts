@@ -1,23 +1,22 @@
-import express, {Request, Response} from "express";
+import express, { Request, Response } from "express";
 import bodyParser from "body-parser";
-import cors from 'cors';
-// import dotenv from 'dotenv';
+import cors from "cors";
+import Router from "./routes/test.ts";
 
 const app = express();
 
-// dotenv.config({path: './env'})
-
-app.use(cors())
+app.use(cors());
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use("/", Router);
 
-app.get("/", (_req: Request, res:Response) => {
+app.get("/", (_req: Request, res: Response) => {
   res.json({
     success: true,
     message: "working",
   });
 });
 
-app.listen(5000, () => {
-  console.log(`Running server at localhost:5000`);
+app.listen(process.env.PORT, () => {
+  console.log(`Running server at localhost:${process.env.PORT}`);
 });

@@ -1,11 +1,10 @@
 {
-  "watch": [
-    "src"
-  ],
+  "watch": ["src"],
+  "ignore": ["node_modules/**", "dist/**"],
   "ext": ".ts,.js",
   "exec": "ts-node ./src/index.ts",
   "env": {
-    "PORT": 1234,
+    "PORT": 5000,
     "authSecret": "ooicn398u485p0pp30129iepklfmdlfpwo09ir9oefnvflvepr23i40128hfernkbprpri412373iuhiuenvfdmbflb23RUOIG"
   }
 }
