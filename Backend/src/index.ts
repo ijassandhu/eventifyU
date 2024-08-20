@@ -5,7 +5,6 @@ import userRouter from "./routes/user.ts";
 
 const app = express();
 
-console.log("reached");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());

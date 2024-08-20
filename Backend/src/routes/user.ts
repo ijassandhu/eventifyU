@@ -5,7 +5,7 @@ import {
   validatePassword,
   validatePhoneno,
   validateRollNo,
-  validatieName,
+  validateName,
 } from "../utils/validation.ts";
 import { hello, registerUser } from "../controller/user.ts";
 
@@ -14,7 +14,7 @@ const Router = express.Router();
 Router.post(
   "/",
   [
-    validatieName,
+    validateName,
     validateClass,
     validateEmail,
     validateRollNo,
