@@ -1,9 +1,9 @@
 import { Pool } from "pg";
 
 export default new Pool({
-  user: "eventifyu",
-  host: "localhost",
-  database: "eventifyu",
-  password: "Pu!a5 a1a Mama, bachhk3 rahi",
-  port: 5432,
+  user: process.env.postgresUser,
+  host: process.env.postgresHost,
+  database: process.env.postgresDB,
+  password: process.env.postgresPass,
+  port: parseInt(process.env.postgresPort ?? "0"),
 });
