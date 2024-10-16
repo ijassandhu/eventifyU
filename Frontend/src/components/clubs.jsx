@@ -62,37 +62,78 @@ const Clubs = () => {
     <>
       <Navbar />
       <div className="background min-h-screen bg-[#2b2b2b] pt-16 md:pt-20 flex flex-col items-center pb-20 md:pb-0">
-        {/* Introductory Content */}
-        <div className="text-center text-white max-w-3xl mb-10 px-6 md:px-0">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4 pt-10">
-            <WordPullUp
-              words="Explore Our Clubs"
-              wrapperFramerProps={{
-                hidden: { opacity: 0 },
-                show: {
-                  opacity: 1,
-                  transition: {
-                    staggerChildren: 0.2,
+        <div className=" text-white max-w-3xl mb-10 px-6 md:px-0 w-[100%]">
+          <div className="items-center flex flex-col">
+            <h1 className="text-3xl md:text-4xl font-bold mb-4 pt-10">
+              <WordPullUp
+                words="Explore Our Clubs"
+                wrapperFramerProps={{
+                  hidden: { opacity: 0 },
+                  show: {
+                    opacity: 1,
+                    transition: {
+                      staggerChildren: 0.2,
+                    },
                   },
-                },
-              }}
-              framerProps={{
-                hidden: { y: 20, opacity: 0 },
-                show: { y: 0, opacity: 1 },
-              }}
-              className="text-white text-3xl md:text-2xl lg:text-3xl font-bold"
-            />
-          </h1>
+                }}
+                framerProps={{
+                  hidden: { y: 20, opacity: 0 },
+                  show: { y: 0, opacity: 1 },
+                }}
+                className="text-white text-3xl md:text-2xl lg:text-3xl font-bold"
+              />
+            </h1>
 
-          <p className="text-lg">
-            At Chandigarh Group of Colleges, the Department of Student Welfare
-            (DSW) manages a diverse range of clubs catering to different student
-            interests. These clubs are integral to our vibrant campus life,
-            organizing events that provide students with opportunities to grow,
-            network, and showcase their talents. Whether you're into technology,
-            arts, sports, or culture, there’s a club for you. Dive in and
-            discover the community that suits your passions!
-          </p>
+            <div className="bg-gray-100 p-8 rounded-lg shadow-lg md:p-12 w-22">
+              <h2 className="text-2xl md:text-3xl font-bold text-[#2b2b2b] mb-4">
+                Discover Your Passion with DSW Clubs
+              </h2>
+              <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+                <span className="font-semibold text-[#2b2b2b]">
+                  At Chandigarh Group of Colleges, the Department of Student
+                  Welfare (DSW)
+                </span>
+                plays a pivotal role in enhancing the overall student experience
+                by managing a diverse array of clubs that cater to the varied
+                interests and passions of our students. These clubs are more
+                than just extracurricular activities—they are the
+                <span className="text-[#99EA73] font-semibold">
+                  {" "}
+                  heartbeat of our vibrant campus
+                </span>
+                , fostering a strong sense of community, belonging, and personal
+                growth.
+              </p>
+
+              <p className="mt-6 text-lg md:text-xl text-gray-700 leading-relaxed">
+                By engaging in these clubs, students have the unique opportunity
+                to develop
+                <span className="text-[#99EA73] font-semibold">
+                  {" "}
+                  leadership skills
+                </span>
+                , connect with peers and professionals, and showcase their
+                talents on diverse platforms. Whether your passion lies in
+                <span className="text-[#99EA73] font-semibold">
+                  {" "}
+                  cutting-edge technology
+                </span>
+                , creative arts, competitive sports, or rich cultural
+                traditions, there's a club ready to welcome you.
+              </p>
+
+              <p className="mt-6 text-lg md:text-xl text-gray-700 leading-relaxed italic">
+                Explore new horizons, immerse yourself in dynamic communities,
+                and let these clubs enrich your college experience, empowering
+                you to excel both personally and professionally.
+              </p>
+
+              <p className="mt-8 text-xl md:text-2xl font-bold text-[#2b2b2b]">
+                Dive in, discover the club that resonates with your ambitions,
+                and become a part of something extraordinary!
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Club Listings */}

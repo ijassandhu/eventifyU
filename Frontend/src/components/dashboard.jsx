@@ -22,7 +22,7 @@ const DATE_OPTIONS = { weekday: "long", month: "short", day: "numeric" };
 const Dashboard = () => {
   const location = useLocation();
   const [isLoggedIn, setLoggedIn] = useState(true);
-  const [logoutconfirmation, setlogoutconfirmation] = useState(false);
+  const [logoutconfirmation, setLogoutConfirmation] = useState(false);
   return (
     <div>
       <Navbar />
@@ -76,7 +76,7 @@ const Dashboard = () => {
               {isLoggedIn ? (
                 <div>
                   <button
-                    onClick={() => setlogoutconfirmation(true)}
+                    onClick={() => setLogoutConfirmation(true)}
                     className="flex flex-row gap-2 items-center pl-2 rounded-2xl h-12 w-full cursor-pointer hover:text-black hover:bg-[#99EA73] transition duration-300 ease-in-out"
                   >
                     <LogOut />
@@ -86,10 +86,10 @@ const Dashboard = () => {
                     <LogoutConfirmation
                       onConfirm={() => {
                         setLoggedIn(false);
-                        setLogoutconfirmation(false);
+                        setLogoutConfirmation(false);
                       }}
                       onCancel={() => {
-                        setLogoutconfirmation(false);
+                        setLogoutConfirmation(false);
                       }}
                     />
                   )}

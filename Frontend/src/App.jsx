@@ -1,6 +1,7 @@
 import "./App.css";
 import "./index.css";
 import { Route, Routes } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 
 import Body from "./components/body.jsx";
 import Login from "./components/Login.jsx";
@@ -26,18 +27,20 @@ import FAQ from "./components/faq.jsx";
 function App() {
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Body />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/clubs" element={<Clubs />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/feedback" element={<Feedback />} />
-        <Route path="/clubs/:club_tag" element={<ClubTemplate />} />
-        <Route path="/faq" element={<FAQ />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <AnimatePresence wait>
+        <Routes>
+          <Route path="/" element={<Body />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/clubs" element={<Clubs />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/feedback" element={<Feedback />} />
+          <Route path="/clubs/:club_tag" element={<ClubTemplate />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </AnimatePresence>
     </>
   );
 }
