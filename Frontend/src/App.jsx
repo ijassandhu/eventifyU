@@ -8,7 +8,7 @@ import Events from "./components/events.jsx";
 import Clubs from "./components/clubs.jsx";
 import Feedback from "./components/feedback.jsx";
 import Dashboard from "./components/dashboard.jsx";
-import NotFound from "./components/Notfound.jsx";
+import NotFound from "./components/NotFound.jsx";
 import ClubTemplate from "./components/clubs/clubtemplate.jsx";
 import Contact from "./components/contactus.jsx";
 import FAQ from "./components/faq.jsx";
