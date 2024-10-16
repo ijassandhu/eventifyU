@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { club_collection } from "./club_collection";
 import Navbar from "../navbar";
-import NotFound from "../Notfound";
+import NotFound from "../NotFound";
 import Footericons from "../footericons";
 
 export default function ClubTemplate() {
