@@ -6,8 +6,9 @@ import {
   validatePhoneno,
   validateRollNo,
   validateName,
+  validateId,
 } from "../utils/validation.ts";
-import { hello, registerUser } from "../controller/user.ts";
+import { getUser, loginUser, registeredUser } from "../controller/user.ts";
 
 const Router = express.Router();
 
@@ -21,11 +22,17 @@ Router.post(
     validatePhoneno,
     validatePassword,
   ],
-  registerUser,
+  registeredUser,
 );
-Router.put("/");
-Router.get("/");
-Router.delete("/");
-Router.get("/hello", hello);
+Router.put("/", [
+  validateName,
+  validateClass,
+  validateEmail,
+  validateRollNo,
+  validatePhoneno,
+  validatePassword,
+]);
+Router.get("/:id",[validateId], getUser);
+Router.post("/login",[validateEmail, validatePassword],loginUser);
 
 export default Router;

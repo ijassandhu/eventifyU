@@ -8,7 +8,7 @@ export const validateEmail = body("email")
   .isEmail()
   .withMessage("Invalid Email");
 
-export const validatePassword = body("password")
+export const validatePassword = body("userpassword")
   .isStrongPassword({
     minLength: 8,
     minLowercase: 1,
@@ -17,6 +17,8 @@ export const validatePassword = body("password")
     minNumbers: 1,
   })
   .withMessage("Weak Password");
+
+export const validateId = param("id").notEmpty().withMessage("Empty").isJWT().withMessage("Not a valid id");
 
 export const validateString = (field: string, optional: boolean = true) =>
   optional
@@ -45,13 +47,15 @@ export const validateRollNo = body("rollno")
 //													 derived validation
 // =============================================================================
 
-export const validateClass = validateString("class")
+export const validateClass = validateString("userclass")
   .matches(/^\d[A-Z]\d$/)
   .withMessage("Invalid class");
 
-export const validateName = validateString("name", false).isLength({
-  min: 3,
-  max: 30,
-}).withMessage('Chota hai');
+export const validateName = validateString("username", false)
+  .isLength({
+    min: 3,
+    max: 30,
+  })
+  .withMessage("Chota hai");
 
 export const validatePhoneno = validateString("phoneNo").matches(/^\d{10}$/);
