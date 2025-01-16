@@ -91,7 +91,7 @@ function Body() {
       <Navbar />
 
       <div className="hero-section" id="home">
-        <div className="hero-section1 flex flex-col md:flex-row gap-8 p-4 md:mt-20 mt-16 relative">
+        <div className="hero-section1 flex flex-col md:flex-row gap-8 p-4 md:mt-20 mt-16 relative z-10">
           <div className="md:w-[50%] md:p-12 flex flex-col text-center  pt-20 md:pt-28">
             <BoxReveal
               width="100%"

@@ -23,3 +23,4 @@ const BlurIn = ({ word, className, variant, duration = 1 }) => {
 };
 
 export default BlurIn;
+

@@ -24,7 +24,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="flex bg-[#222] md:h-20 h-16 items-center fixed top-0 w-[100vw] z-10 px-4 md:px-0 shadow-lg shadow-[#99EA73]/30">
+      <nav className="flex bg-[#222] md:h-20 h-16 items-center fixed top-0 w-[100vw] z-50 px-4 md:px-0 shadow-lg shadow-[#99EA73]/30">
         <div className="text-[#99EA73] text-2xl flex absolute md:left-20">
           <h1 className="hover:text-white transition-colors duration-300">
             event
