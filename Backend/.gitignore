@@ -1,3 +1,4 @@
 /node_modules
 /dist
 nodemon.json
+sslCertificate.pem

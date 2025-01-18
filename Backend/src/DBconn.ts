@@ -1,9 +1,18 @@
-import { Pool } from "pg";
+import fs from "fs";
+import path from "path";
+import pg from "pg";
 
-export default new Pool({
-  user: process.env.postgresUser,
-  host: process.env.postgresHost,
-  database: process.env.postgresDB,
-  password: process.env.postgresPass,
-  port: parseInt(process.env.postgresPort ?? "0"),
-});
+const config = {
+  connectionString: process.env.PGCS,
+  ssl: {
+    rejectUnauthorized: true,
+    ca: fs
+      .readFileSync(path.resolve(__dirname, process.env.PGSSL as string))
+      .toString(),
+  },
+};
+
+const client = new pg.Client(config);
+client.connect();
+
+export default client;

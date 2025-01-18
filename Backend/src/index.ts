@@ -16,7 +16,6 @@ app.get("/", (_req: Request, res: Response) => {
     message: "working",
   });
 });
-
 app.listen(parseInt(process.env.PORT as string), "127.0.0.1", () => {
   console.log(`Running server at localhost:${process.env.PORT}`);
 });
