@@ -33,7 +33,9 @@ export const registeredUser = asyncErrorHandler(
         await registrationArray(matchedData(req)),
       );
       if (user.rows) res.status(201).json(userFilter(user.rows[0]));
-    } else res.status(400).json(result.array());
+    } else res.status(400).json({
+      "msg": result
+    });
   },
 );
 
