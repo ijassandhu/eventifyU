@@ -36,3 +36,8 @@ Router.get("/:id",[validateId], getUser);
 Router.post("/login",[validateEmail, validatePassword],loginUser);
 
 export default Router;
+
+
+
+// localhost:5000/user/:id
+// localhost:5000/user/login
